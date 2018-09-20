@@ -1,0 +1,6 @@
+framework module CiaoTransitions {
+  umbrella header "CiaoTransitions-umbrella.h"
+
+  export *
+  module * { export * }
+}

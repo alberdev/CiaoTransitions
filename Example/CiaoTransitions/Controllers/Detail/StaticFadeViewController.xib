@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StaticFadeViewController" customModule="CiaoExample" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Item1" translatesAutoresizingMaskIntoConstraints="NO" id="SbI-lA-Psf">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="350" id="ePJ-3e-bg6"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FADE TRANSITION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glw-c5-ksv">
+                    <rect key="frame" x="8" y="366" width="359" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="17" id="IAX-Jm-p1k"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                    <color key="textColor" red="0.51764705879999995" green="0.51372549020000002" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Fade transition in view" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="asZ-mk-4V9">
+                    <rect key="frame" x="8" y="386" width="359" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="wdI-gF-nWR"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                    <color key="textColor" red="0.1647058824" green="0.1647058824" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wzd-RU-dR0">
+                    <rect key="frame" x="8" y="438" width="359" height="150.5"/>
+                    <string key="text">To start, swipe down this view. 
+
+If you like to implement it, assign the view from ViewController to CiaoTransition controller when the view is loaded. Set the callback before pushing the view.
+
+Also you must set navigation delegate to CiaoTransition controller to make this working.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.23137254900000001" green="0.2156862745" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Wzd-RU-dR0" secondAttribute="trailing" constant="8" id="0Ou-s9-RIr"/>
+                <constraint firstItem="glw-c5-ksv" firstAttribute="top" secondItem="SbI-lA-Psf" secondAttribute="bottom" constant="16" id="5BI-dT-wt9"/>
+                <constraint firstItem="SbI-lA-Psf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="7s4-KT-MOK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="asZ-mk-4V9" secondAttribute="trailing" constant="8" id="CBR-bL-trJ"/>
+                <constraint firstItem="glw-c5-ksv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="CoI-g3-Ot5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="glw-c5-ksv" secondAttribute="trailing" constant="8" id="JUo-Sr-gux"/>
+                <constraint firstItem="Wzd-RU-dR0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="QKQ-Ab-Ljf"/>
+                <constraint firstItem="Wzd-RU-dR0" firstAttribute="top" secondItem="asZ-mk-4V9" secondAttribute="bottom" constant="12" id="S4V-01-zjH"/>
+                <constraint firstItem="asZ-mk-4V9" firstAttribute="top" secondItem="glw-c5-ksv" secondAttribute="bottom" constant="3" id="Xkc-8A-5V9"/>
+                <constraint firstItem="asZ-mk-4V9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="Zw9-FX-OWv"/>
+                <constraint firstItem="SbI-lA-Psf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="os2-nH-U5w"/>
+                <constraint firstItem="SbI-lA-Psf" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="tc0-p5-UeJ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Item1" width="330" height="330"/>
+    </resources>
+</document>

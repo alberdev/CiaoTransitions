@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScrollFadeViewController" customModule="CiaoExample" customModuleProvider="target">
+            <connections>
+                <outlet property="scrollView" destination="3oL-J5-tJH" id="04W-Qb-rlx"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="b68-Pc-aMH"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="1155"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3oL-J5-tJH">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="1155"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LjB-YQ-Hfe">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="1155"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Item2" translatesAutoresizingMaskIntoConstraints="NO" id="z5U-T7-Awr">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="350" id="Cnh-BZ-wSo"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FADE TRANSITION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3AQ-Rf-HlV">
+                                    <rect key="frame" x="8" y="368" width="359" height="17"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="17" id="ZyG-Ze-DhJ"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                    <color key="textColor" red="0.51764705879999995" green="0.51372549020000002" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Fade transition with scroll view" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlZ-CI-If3">
+                                    <rect key="frame" x="8" y="388" width="359" height="71"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="71" id="L6k-XM-qx7"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                    <color key="textColor" red="0.1647058824" green="0.1647058824" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wvq-e2-r4Z">
+                                    <rect key="frame" x="8" y="481" width="359" height="167.5"/>
+                                    <mutableString key="text">To start, swipe down this view. 
+
+If you like to implement it, assign the scroll view to CiaoTransition controller when the view is loaded. Set the callback before pushing the view.
+
+Also you must set navigation delegate to CiaoTransition controller to make this working.
+
+See next example:</mutableString>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" red="0.23137254900000001" green="0.2156862745" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mwH-so-87P">
+                                    <rect key="frame" x="8" y="670" width="359" height="200.5"/>
+                                    <string key="text">let ciaoTransition = CiaoTransition(type: .swipeFade, duration: 0.6)
+let toViewController = DetailViewController()
+
+toViewController.didLoadCallback = { view in
+            ciaoTransition.swipedView = view
+}
+        
+fromViewController.navigationController?.delegate = ciaoTransition     fromViewController.navigationController?.pushViewController(toViewController, animated: true)</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="mwH-so-87P" secondAttribute="trailing" constant="8" id="9sk-7I-VzU"/>
+                                <constraint firstAttribute="trailing" secondItem="z5U-T7-Awr" secondAttribute="trailing" id="QX4-ga-jf2"/>
+                                <constraint firstItem="mwH-so-87P" firstAttribute="leading" secondItem="LjB-YQ-Hfe" secondAttribute="leading" constant="8" id="SUF-go-uuf"/>
+                                <constraint firstItem="mwH-so-87P" firstAttribute="top" secondItem="wvq-e2-r4Z" secondAttribute="bottom" constant="21.5" id="Y7A-O7-uF6"/>
+                                <constraint firstItem="rlZ-CI-If3" firstAttribute="top" secondItem="3AQ-Rf-HlV" secondAttribute="bottom" constant="3" id="YX0-S9-EhK"/>
+                                <constraint firstAttribute="height" constant="1155" id="ZXX-Wh-4IM"/>
+                                <constraint firstItem="3AQ-Rf-HlV" firstAttribute="top" secondItem="z5U-T7-Awr" secondAttribute="bottom" constant="18" id="bfP-af-c0K"/>
+                                <constraint firstAttribute="trailing" secondItem="wvq-e2-r4Z" secondAttribute="trailing" constant="8" id="cd5-vi-6sC"/>
+                                <constraint firstItem="wvq-e2-r4Z" firstAttribute="top" secondItem="rlZ-CI-If3" secondAttribute="bottom" constant="22" id="dH3-l1-0cL"/>
+                                <constraint firstAttribute="trailing" secondItem="rlZ-CI-If3" secondAttribute="trailing" constant="8" id="ddO-mx-ArM"/>
+                                <constraint firstItem="wvq-e2-r4Z" firstAttribute="leading" secondItem="LjB-YQ-Hfe" secondAttribute="leading" constant="8" id="fIz-0x-SWY"/>
+                                <constraint firstItem="rlZ-CI-If3" firstAttribute="leading" secondItem="LjB-YQ-Hfe" secondAttribute="leading" constant="8" id="ieO-jV-G51"/>
+                                <constraint firstItem="z5U-T7-Awr" firstAttribute="top" secondItem="LjB-YQ-Hfe" secondAttribute="top" id="mOo-FM-ZgZ"/>
+                                <constraint firstItem="z5U-T7-Awr" firstAttribute="leading" secondItem="LjB-YQ-Hfe" secondAttribute="leading" id="r4r-pt-rdc"/>
+                                <constraint firstItem="3AQ-Rf-HlV" firstAttribute="leading" secondItem="LjB-YQ-Hfe" secondAttribute="leading" constant="8" id="vnn-gd-P6X"/>
+                                <constraint firstAttribute="trailing" secondItem="3AQ-Rf-HlV" secondAttribute="trailing" constant="8" id="yvb-cj-jMo"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="LjB-YQ-Hfe" secondAttribute="bottom" id="2iH-QY-iKx"/>
+                        <constraint firstItem="LjB-YQ-Hfe" firstAttribute="top" secondItem="3oL-J5-tJH" secondAttribute="top" id="BFX-qz-8kR"/>
+                        <constraint firstAttribute="trailing" secondItem="LjB-YQ-Hfe" secondAttribute="trailing" id="UfF-eA-yM8"/>
+                        <constraint firstItem="LjB-YQ-Hfe" firstAttribute="leading" secondItem="3oL-J5-tJH" secondAttribute="leading" id="Yjz-SL-po8"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="LjB-YQ-Hfe" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" priority="250" id="2Hx-uZ-Rf8"/>
+                <constraint firstItem="3oL-J5-tJH" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="2Ws-rx-fNa"/>
+                <constraint firstItem="3oL-J5-tJH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="5uN-ae-Ygb"/>
+                <constraint firstItem="LjB-YQ-Hfe" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="FhZ-bt-s5m"/>
+                <constraint firstItem="3oL-J5-tJH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="bpR-tj-qvz"/>
+                <constraint firstItem="3oL-J5-tJH" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="tyk-uQ-m4g"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="133.5" y="619.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Item2" width="330" height="330"/>
+    </resources>
+</document>

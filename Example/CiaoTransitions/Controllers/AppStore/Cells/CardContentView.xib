@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardContentView" customModule="CiaoExample" customModuleProvider="target">
+            <connections>
+                <outlet property="backdropImageView" destination="geY-pg-FHZ" id="jKN-cz-86U"/>
+                <outlet property="bottomImageConstraint" destination="ZV1-TE-ClR" id="gg8-q9-czq"/>
+                <outlet property="leftImageConstraint" destination="F4T-0s-U7n" id="ibm-j1-0a3"/>
+                <outlet property="rightImageConstraint" destination="IbR-P8-vk4" id="Uw6-Dt-uKs"/>
+                <outlet property="subtitleLabel" destination="d41-f5-fmm" id="qvP-Sb-oUa"/>
+                <outlet property="titleLabel" destination="PDd-ZA-r5E" id="zJ0-UQ-7NK"/>
+                <outlet property="topImageConstraint" destination="vd0-g0-3nN" id="Sqk-98-JrX"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="OH1-uB-nhe">
+            <rect key="frame" x="0.0" y="0.0" width="330" height="358"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconList" translatesAutoresizingMaskIntoConstraints="NO" id="geY-pg-FHZ">
+                    <rect key="frame" x="0.0" y="0.0" width="330" height="358"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </imageView>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OsJ-mI-HpA">
+                    <rect key="frame" x="0.0" y="253" width="330" height="105"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ART-ZU-HdD">
+                        <rect key="frame" x="0.0" y="0.0" width="330" height="105"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GET STARTED" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d41-f5-fmm">
+                                <rect key="frame" x="14" y="12" width="291" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="ugc-bG-XXU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                <color key="textColor" red="0.51764705879999995" green="0.51372549020000002" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Dinner at Your Doorstep" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDd-ZA-r5E">
+                                <rect key="frame" x="14" y="29" width="291" height="63"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <color key="textColor" red="0.1647058824" green="0.1647058824" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="PDd-ZA-r5E" firstAttribute="top" secondItem="d41-f5-fmm" secondAttribute="bottom" id="677-ja-MB1"/>
+                            <constraint firstItem="PDd-ZA-r5E" firstAttribute="leading" secondItem="ART-ZU-HdD" secondAttribute="leading" constant="14" id="9L1-TQ-eJj"/>
+                            <constraint firstAttribute="trailing" secondItem="PDd-ZA-r5E" secondAttribute="trailing" constant="25" id="SXf-ze-Jt8"/>
+                            <constraint firstAttribute="bottom" secondItem="PDd-ZA-r5E" secondAttribute="bottom" constant="13" id="Y9P-J2-YYn"/>
+                            <constraint firstItem="d41-f5-fmm" firstAttribute="leading" secondItem="ART-ZU-HdD" secondAttribute="leading" constant="14" id="dwD-W2-DxK"/>
+                            <constraint firstItem="d41-f5-fmm" firstAttribute="top" secondItem="ART-ZU-HdD" secondAttribute="top" constant="12" id="uHy-g8-WdS"/>
+                            <constraint firstAttribute="trailing" secondItem="d41-f5-fmm" secondAttribute="trailing" constant="25" id="xi9-LJ-P2T"/>
+                        </constraints>
+                    </view>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="105" id="wug-LO-5V8"/>
+                    </constraints>
+                    <blurEffect style="light"/>
+                </visualEffectView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="OsJ-mI-HpA" secondAttribute="trailing" id="7Se-Gt-zvm"/>
+                <constraint firstAttribute="bottom" secondItem="OsJ-mI-HpA" secondAttribute="bottom" id="CSv-2x-gaE"/>
+                <constraint firstItem="geY-pg-FHZ" firstAttribute="leading" secondItem="OH1-uB-nhe" secondAttribute="leading" id="F4T-0s-U7n"/>
+                <constraint firstItem="OsJ-mI-HpA" firstAttribute="leading" secondItem="OH1-uB-nhe" secondAttribute="leading" id="IJX-OG-sDE"/>
+                <constraint firstAttribute="trailing" secondItem="geY-pg-FHZ" secondAttribute="trailing" id="IbR-P8-vk4"/>
+                <constraint firstAttribute="bottom" secondItem="geY-pg-FHZ" secondAttribute="bottom" id="ZV1-TE-ClR"/>
+                <constraint firstItem="geY-pg-FHZ" firstAttribute="top" secondItem="OH1-uB-nhe" secondAttribute="top" id="vd0-g0-3nN"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="bGM-UG-CLJ"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="IconList" width="736" height="552"/>
+    </resources>
+</document>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="kRX-6I-rZk" customClass="TodayHeaderReusableView" customModule="CiaoExample" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="976" height="81"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="SATURDAY, JUNE 17" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ccr-Zb-hTt">
+                    <rect key="frame" x="20" y="18" width="936" height="15"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                    <color key="textColor" red="0.51764705879999995" green="0.51372549020000002" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="poE-EF-bAm">
+                    <rect key="frame" x="20" y="31" width="893" height="43"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="893" id="AP5-1O-Uia"/>
+                        <constraint firstAttribute="height" constant="43" id="Fwc-m5-ksZ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile" translatesAutoresizingMaskIntoConstraints="NO" id="QYj-bg-7cx">
+                    <rect key="frame" x="921" y="38" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="35" id="5YY-5Q-Zff"/>
+                        <constraint firstAttribute="height" constant="35" id="go8-b0-b5k"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Ccr-Zb-hTt" firstAttribute="leading" secondItem="kRX-6I-rZk" secondAttribute="leading" constant="20" id="2GL-9i-2VK"/>
+                <constraint firstItem="poE-EF-bAm" firstAttribute="centerY" secondItem="kRX-6I-rZk" secondAttribute="centerY" constant="12" id="9xH-iC-ufA"/>
+                <constraint firstItem="5Gr-hG-bJb" firstAttribute="trailing" secondItem="QYj-bg-7cx" secondAttribute="trailing" constant="20" id="Tkc-KY-m9I"/>
+                <constraint firstItem="QYj-bg-7cx" firstAttribute="centerY" secondItem="kRX-6I-rZk" secondAttribute="centerY" constant="15" id="Wkx-Dm-qa0"/>
+                <constraint firstItem="Ccr-Zb-hTt" firstAttribute="centerY" secondItem="kRX-6I-rZk" secondAttribute="centerY" constant="-15.75" id="fg2-92-sAl"/>
+                <constraint firstItem="poE-EF-bAm" firstAttribute="leading" secondItem="5Gr-hG-bJb" secondAttribute="leading" constant="20" id="jpt-6h-weE"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="5Gr-hG-bJb"/>
+            <connections>
+                <outlet property="profileImageView" destination="QYj-bg-7cx" id="RAT-we-KoB"/>
+                <outlet property="subtitleLabel" destination="Ccr-Zb-hTt" id="dKK-6c-ijx"/>
+                <outlet property="titleLabel" destination="poE-EF-bAm" id="Pmv-Lm-Ij5"/>
+            </connections>
+            <point key="canvasLocation" x="362" y="31.5"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="Profile" width="1296" height="1295"/>
+    </resources>
+</document>
