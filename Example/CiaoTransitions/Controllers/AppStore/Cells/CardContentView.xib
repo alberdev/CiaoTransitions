@@ -25,7 +25,7 @@
             <rect key="frame" x="0.0" y="0.0" width="330" height="358"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconList" translatesAutoresizingMaskIntoConstraints="NO" id="geY-pg-FHZ">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image1" translatesAutoresizingMaskIntoConstraints="NO" id="geY-pg-FHZ">
                     <rect key="frame" x="0.0" y="0.0" width="330" height="358"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </imageView>
@@ -47,7 +47,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDd-ZA-r5E">
                                 <rect key="frame" x="14" y="29" width="291" height="63"/>
                                 <string key="text">Best latest
-game releases</string>
+photos sample 1</string>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <color key="textColor" red="0.1647058824" green="0.1647058824" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -84,6 +84,6 @@ game releases</string>
         </view>
     </objects>
     <resources>
-        <image name="IconList" width="736" height="552"/>
+        <image name="Image1" width="2681" height="4016"/>
     </resources>
 </document>
