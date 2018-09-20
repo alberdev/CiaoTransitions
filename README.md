@@ -171,7 +171,7 @@ params.sourceFrame = rectInView
 ```
 >Tagging your image view in presented view controller is required to help `CiaoTransition` getting the view to make interactive transitions. Remember using the same tag in your image view & `destImageViewTag`
 
-![Sample1](https://raw.githubusercontent.com/alberdev/CiaoTransitions/master/Images/sample1.png)
+![Sample1](https://raw.githubusercontent.com/alberdev/CiaoTransitions/master/Images/sample_screenshot1.png)
 
 ```swift
 params.destImageViewTag = 100
