@@ -12,14 +12,14 @@ public enum CiaoTransitionType {
 
     public enum Push {
         
-        case pushLateral
-        case pushVertical
-        case pushScaleImage
+        case lateral
+        case vertical
+        case scaleImage
         
         func animatorController(direction: CiaoTransitionDirection, params: CiaoTransition.Params, scaleParams: CiaoTransition.ScaleParams?) -> CiaoTransitionAnimator? {
             
             switch self {
-            case .pushLateral:
+            case .lateral:
                 
                 let swipeLateralAnimator = PushLateralTransitionAnimator(
                     direction: direction,
@@ -27,36 +27,36 @@ public enum CiaoTransitionType {
                 
                 return direction == .dismissal ? swipeLateralAnimator : nil
                 
-            case .pushVertical: return PushVerticalTransitionAnimator(direction: direction, params: params)
-            case .pushScaleImage: return PushScaleTransitionAnimator(direction: direction, params: params, scaleParams: scaleParams)
+            case .vertical: return PushVerticalTransitionAnimator(direction: direction, params: params)
+            case .scaleImage: return PushScaleTransitionAnimator(direction: direction, params: params, scaleParams: scaleParams)
             }
         }
         
         func interactorController(params: CiaoTransition.Params, navigationController: UINavigationController? = nil, presentedViewController: UIViewController? = nil) -> CiaoTransitionInteractor? {
             switch self {
                 
-            case .pushLateral: return PushLateralTransitionInteractor(params: params, navigationController: navigationController, presentedViewController: presentedViewController)
-            case .pushVertical: return PushVerticalTransitionInteractor(params: params, navigationController: navigationController, presentedViewController: presentedViewController)
-            case .pushScaleImage: return PushScaleTransitionInteractor(params: params, navigationController: navigationController, presentedViewController: presentedViewController)
+            case .lateral: return PushLateralTransitionInteractor(params: params, navigationController: navigationController, presentedViewController: presentedViewController)
+            case .vertical: return PushVerticalTransitionInteractor(params: params, navigationController: navigationController, presentedViewController: presentedViewController)
+            case .scaleImage: return PushScaleTransitionInteractor(params: params, navigationController: navigationController, presentedViewController: presentedViewController)
             }
         }
     }
 
     public enum Modal {
         
-        case modalAppStore
+        case appStore
         
         func animatorController(direction: CiaoTransitionDirection, params: CiaoTransition.Params, scaleParams: CiaoTransition.ScaleParams?) -> CiaoTransitionAnimator? {
         
             switch self {
-            case .modalAppStore: return nil
+            case .appStore: return nil
             }
         }
         
         func interactorController(params: CiaoTransition.Params, navigationController: UINavigationController? = nil, presentedViewController: UIViewController? = nil) -> CiaoTransitionInteractor? {
             
             switch self {
-            case .modalAppStore: return DismissAppStoreInteractor(params: params, navigationController: navigationController, presentedViewController: presentedViewController)
+            case .appStore: return DismissAppStoreInteractor(params: params, navigationController: navigationController, presentedViewController: presentedViewController)
             }
         }
     }

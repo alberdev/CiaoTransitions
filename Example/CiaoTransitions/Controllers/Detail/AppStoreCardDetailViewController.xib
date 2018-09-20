@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AppStoreCardDetailViewController" customModule="Ciao_Example" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AppStoreCardDetailViewController" customModule="CiaoTransitions_Example" customModuleProvider="target">
             <connections>
                 <outlet property="cardContentView" destination="she-Df-Y1g" id="ZLI-x5-mYA"/>
                 <outlet property="scrollView" destination="nKp-Rh-3Iv" id="JpO-MW-eum"/>
@@ -28,7 +28,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Scs-Vr-84v">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             <subviews>
-                                <view tag="100" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="she-Df-Y1g" customClass="CardContentView" customModule="Ciao_Example" customModuleProvider="target">
+                                <view tag="100" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="she-Df-Y1g" customClass="CardContentView" customModule="CiaoTransitions_Example" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>

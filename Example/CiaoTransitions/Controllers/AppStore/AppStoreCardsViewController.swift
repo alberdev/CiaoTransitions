@@ -117,7 +117,7 @@ extension AppStoreCardsViewController: UICollectionViewDelegate {
         params.dragDownEnabled = true
         params.dragLateralEnabled = false
         
-        let ciaoTransition = CiaoTransition(modalTransitionType: .modalAppStore, params: params, toViewTag: 100)
+        let ciaoTransition = CiaoTransition(modalTransitionType: .appStore, params: params, toViewTag: 100)
         ciaoTransition.fromCell = cell
         presentViewController.ciaoTransition = ciaoTransition
         presentViewController.transitioningDelegate = ciaoTransition

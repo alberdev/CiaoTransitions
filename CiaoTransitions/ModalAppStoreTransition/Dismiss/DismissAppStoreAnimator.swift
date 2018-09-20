@@ -47,7 +47,7 @@ extension DismissAppStoreAnimator: UIViewControllerAnimatedTransitioning {
         let container = ctx.containerView
         
         guard
-            let detail = ctx.viewController(forKey: .from) as? CiaoBaseViewController,
+            let detail = ctx.viewController(forKey: .from),
             let cardContentView = detail.view.viewWithTag(params.toViewTag)
             else { return }
         

@@ -261,11 +261,11 @@
 		E37BB51B21531C61006450D2 /* Items */ = {
 			isa = PBXGroup;
 			children = (
-				E37BB51C21531C61006450D2 /* Presenter */,
-				E37BB52321531C61006450D2 /* View */,
-				E37BB53721531C61006450D2 /* Routing */,
-				E37BB53A21531C61006450D2 /* Interactor */,
 				E37BB53F21531C61006450D2 /* Factory */,
+				E37BB53721531C61006450D2 /* Routing */,
+				E37BB51C21531C61006450D2 /* Presenter */,
+				E37BB53A21531C61006450D2 /* Interactor */,
+				E37BB52321531C61006450D2 /* View */,
 			);
 			path = Items;
 			sourceTree = "<group>";

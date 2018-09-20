@@ -29,7 +29,7 @@ enum Globals {
     static let backLateralTranslationEnabled: Bool = false
     
     /// Enable or disable lateral swipe to dismiss view
-    static let dragLateralEnabled: Bool = false
+    static let dragLateralEnabled: Bool = true
     
     /// Enable or disable vertical swipe to dismiss view
     static let dragDownEnabled: Bool = true

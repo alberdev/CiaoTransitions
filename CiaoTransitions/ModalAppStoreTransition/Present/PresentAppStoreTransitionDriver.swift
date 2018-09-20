@@ -25,7 +25,7 @@ class PresentAppStoreTransitionDriver {
         let container = ctx.containerView
         
         guard
-            let detail = ctx.viewController(forKey: .to) as? CiaoBaseViewController,
+            let detail = ctx.viewController(forKey: .to),
             let cardContentView = detail.view.viewWithTag(params.toViewTag)
             else {
                 self.animator = baseAnimator

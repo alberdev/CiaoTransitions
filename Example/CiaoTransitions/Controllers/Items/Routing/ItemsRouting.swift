@@ -25,7 +25,7 @@ extension ItemsRouting: ItemsRoutingInterface {
         if let type = type as? CiaoTransitionType.Push {
             
             switch type {
-            case .pushVertical:
+            case .vertical:
                 
                 params.backfadeEnabled = true
                 params.backScaleEnabled = true
@@ -34,7 +34,7 @@ extension ItemsRouting: ItemsRoutingInterface {
                 params.dragLateralEnabled = false
                 presentViewController = cell.tag == 0 ? StaticFadeViewController() : ScrollFadeViewController()
                 
-            case .pushLateral:
+            case .lateral:
                 
                 params.backfadeEnabled = true
                 params.backScaleEnabled = false
@@ -43,7 +43,7 @@ extension ItemsRouting: ItemsRoutingInterface {
                 params.dragLateralEnabled = true
                 presentViewController = LateralTranslationViewController()
                 
-            case .pushScaleImage:
+            case .scaleImage:
                 
                 params.backfadeEnabled = true
                 params.presentFadeEnabled = true
@@ -65,7 +65,7 @@ extension ItemsRouting: ItemsRoutingInterface {
         if let type = type as? CiaoTransitionType.Modal {
             
             switch type {
-            case .modalAppStore:
+            case .appStore:
             
                 params.backfadeEnabled = true
                 params.backScaleEnabled = false
@@ -75,7 +75,7 @@ extension ItemsRouting: ItemsRoutingInterface {
                 presentViewController = AppStoreCardsViewController()
             }
             
-            ciaoTransition = CiaoTransition(pushTransitionType: CiaoTransitionType.Push.pushLateral, params: params, scaleParams: scaleParams)
+            ciaoTransition = CiaoTransition(pushTransitionType: CiaoTransitionType.Push.lateral, params: params, scaleParams: scaleParams)
             presentViewController?.ciaoTransition = ciaoTransition!
         }
 
