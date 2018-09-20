@@ -39,6 +39,10 @@ With `CiaoTransitions` you can make fancy custom push and modal transitions in y
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+<p align="center" >
+<img src="https://raw.githubusercontent.com/alberdev/CiaoTransitions/master/Images/video_ciao.gif" alt="CiaoTransitions" title="CiaoTransitions demo">
+</p>
+
 ## Installation
 
 Ciao is available through [CocoaPods](https://cocoapods.org). To install

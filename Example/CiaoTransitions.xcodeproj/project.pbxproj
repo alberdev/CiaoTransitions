@@ -32,18 +32,8 @@
 		E37BB55921531C62006450D2 /* CollectionItemsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BB52021531C61006450D2 /* CollectionItemsMapper.swift */; };
 		E37BB55A21531C62006450D2 /* ItemsCollectionViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BB52121531C61006450D2 /* ItemsCollectionViewProtocols.swift */; };
 		E37BB55B21531C62006450D2 /* CollectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BB52221531C61006450D2 /* CollectionItem.swift */; };
-		E37BB55C21531C62006450D2 /* EditorsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BB52521531C61006450D2 /* EditorsCollectionViewCell.swift */; };
-		E37BB55D21531C62006450D2 /* EditorsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E37BB52621531C61006450D2 /* EditorsCollectionViewCell.xib */; };
 		E37BB55E21531C62006450D2 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BB52721531C61006450D2 /* ItemCollectionViewCell.swift */; };
-		E37BB55F21531C62006450D2 /* PremiereCollectionViewCellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BB52821531C61006450D2 /* PremiereCollectionViewCellVM.swift */; };
-		E37BB56021531C62006450D2 /* EditorsCollectionViewCellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BB52921531C61006450D2 /* EditorsCollectionViewCellVM.swift */; };
-		E37BB56121531C62006450D2 /* DayAppCollectionViewCellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BB52A21531C61006450D2 /* DayAppCollectionViewCellVM.swift */; };
-		E37BB56221531C62006450D2 /* DayAppCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BB52B21531C61006450D2 /* DayAppCollectionViewCell.swift */; };
 		E37BB56321531C62006450D2 /* ItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E37BB52C21531C61006450D2 /* ItemCollectionViewCell.xib */; };
-		E37BB56421531C62006450D2 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BB52D21531C61006450D2 /* BaseCollectionViewCell.swift */; };
-		E37BB56521531C62006450D2 /* PremiereCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BB52E21531C61006450D2 /* PremiereCollectionViewCell.swift */; };
-		E37BB56621531C62006450D2 /* DayAppCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E37BB52F21531C61006450D2 /* DayAppCollectionViewCell.xib */; };
-		E37BB56721531C62006450D2 /* PremiereCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E37BB53021531C61006450D2 /* PremiereCollectionViewCell.xib */; };
 		E37BB56821531C62006450D2 /* ItemsViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BB53121531C61006450D2 /* ItemsViewInterface.swift */; };
 		E37BB56921531C62006450D2 /* ItemsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E37BB53221531C61006450D2 /* ItemsViewController.xib */; };
 		E37BB56A21531C62006450D2 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BB53321531C61006450D2 /* ItemsViewController.swift */; };
@@ -92,18 +82,8 @@
 		E37BB52021531C61006450D2 /* CollectionItemsMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionItemsMapper.swift; sourceTree = "<group>"; };
 		E37BB52121531C61006450D2 /* ItemsCollectionViewProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsCollectionViewProtocols.swift; sourceTree = "<group>"; };
 		E37BB52221531C61006450D2 /* CollectionItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionItem.swift; sourceTree = "<group>"; };
-		E37BB52521531C61006450D2 /* EditorsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditorsCollectionViewCell.swift; sourceTree = "<group>"; };
-		E37BB52621531C61006450D2 /* EditorsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditorsCollectionViewCell.xib; sourceTree = "<group>"; };
 		E37BB52721531C61006450D2 /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
-		E37BB52821531C61006450D2 /* PremiereCollectionViewCellVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PremiereCollectionViewCellVM.swift; sourceTree = "<group>"; };
-		E37BB52921531C61006450D2 /* EditorsCollectionViewCellVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditorsCollectionViewCellVM.swift; sourceTree = "<group>"; };
-		E37BB52A21531C61006450D2 /* DayAppCollectionViewCellVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayAppCollectionViewCellVM.swift; sourceTree = "<group>"; };
-		E37BB52B21531C61006450D2 /* DayAppCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayAppCollectionViewCell.swift; sourceTree = "<group>"; };
 		E37BB52C21531C61006450D2 /* ItemCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemCollectionViewCell.xib; sourceTree = "<group>"; };
-		E37BB52D21531C61006450D2 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
-		E37BB52E21531C61006450D2 /* PremiereCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PremiereCollectionViewCell.swift; sourceTree = "<group>"; };
-		E37BB52F21531C61006450D2 /* DayAppCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DayAppCollectionViewCell.xib; sourceTree = "<group>"; };
-		E37BB53021531C61006450D2 /* PremiereCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PremiereCollectionViewCell.xib; sourceTree = "<group>"; };
 		E37BB53121531C61006450D2 /* ItemsViewInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsViewInterface.swift; sourceTree = "<group>"; };
 		E37BB53221531C61006450D2 /* ItemsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemsViewController.xib; sourceTree = "<group>"; };
 		E37BB53321531C61006450D2 /* ItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
@@ -305,18 +285,8 @@
 		E37BB52421531C61006450D2 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				E37BB52521531C61006450D2 /* EditorsCollectionViewCell.swift */,
-				E37BB52621531C61006450D2 /* EditorsCollectionViewCell.xib */,
 				E37BB52721531C61006450D2 /* ItemCollectionViewCell.swift */,
-				E37BB52821531C61006450D2 /* PremiereCollectionViewCellVM.swift */,
-				E37BB52921531C61006450D2 /* EditorsCollectionViewCellVM.swift */,
-				E37BB52A21531C61006450D2 /* DayAppCollectionViewCellVM.swift */,
-				E37BB52B21531C61006450D2 /* DayAppCollectionViewCell.swift */,
 				E37BB52C21531C61006450D2 /* ItemCollectionViewCell.xib */,
-				E37BB52D21531C61006450D2 /* BaseCollectionViewCell.swift */,
-				E37BB52E21531C61006450D2 /* PremiereCollectionViewCell.swift */,
-				E37BB52F21531C61006450D2 /* DayAppCollectionViewCell.xib */,
-				E37BB53021531C61006450D2 /* PremiereCollectionViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -457,10 +427,8 @@
 			files = (
 				E37BB56321531C62006450D2 /* ItemCollectionViewCell.xib in Resources */,
 				E37BB54721531C62006450D2 /* CardContentView.xib in Resources */,
-				E37BB56721531C62006450D2 /* PremiereCollectionViewCell.xib in Resources */,
 				E37BB54921531C62006450D2 /* CardCollectionViewCell.xib in Resources */,
 				E37BB55221531C62006450D2 /* AppStoreCardDetailViewController.xib in Resources */,
-				E37BB55D21531C62006450D2 /* EditorsCollectionViewCell.xib in Resources */,
 				E37BB55521531C62006450D2 /* ScrollFadeViewController.xib in Resources */,
 				E37BB54C21531C62006450D2 /* AppStoreCardsViewController.xib in Resources */,
 				E37BB54F21531C62006450D2 /* LateralTranslationViewController.xib in Resources */,
@@ -470,7 +438,6 @@
 				E37BB54621531C62006450D2 /* Assets.xcassets in Resources */,
 				E37BB56B21531C62006450D2 /* TodayHeaderReusableView.xib in Resources */,
 				E37BB55421531C62006450D2 /* ScaleViewController.xib in Resources */,
-				E37BB56621531C62006450D2 /* DayAppCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,7 +488,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E37BB55B21531C62006450D2 /* CollectionItem.swift in Sources */,
-				E37BB55C21531C62006450D2 /* EditorsCollectionViewCell.swift in Sources */,
 				E37BB57321531C62006450D2 /* UIView+Tools.swift in Sources */,
 				E37BB55621531C62006450D2 /* StaticFadeViewController.swift in Sources */,
 				E37BB55921531C62006450D2 /* CollectionItemsMapper.swift in Sources */,
@@ -529,22 +495,16 @@
 				E37BB55721531C62006450D2 /* ItemsPresenter.swift in Sources */,
 				E37BB54D21531C62006450D2 /* ScrollFadeViewController.swift in Sources */,
 				E37BB57021531C62006450D2 /* ItemsInteractorIO.swift in Sources */,
-				E37BB56021531C62006450D2 /* EditorsCollectionViewCellVM.swift in Sources */,
 				E37BB57121531C62006450D2 /* ItemsInteractor.swift in Sources */,
 				E37BB56D21531C62006450D2 /* ItemsRouting.swift in Sources */,
-				E37BB56221531C62006450D2 /* DayAppCollectionViewCell.swift in Sources */,
-				E37BB56521531C62006450D2 /* PremiereCollectionViewCell.swift in Sources */,
-				E37BB56421531C62006450D2 /* BaseCollectionViewCell.swift in Sources */,
 				E37BB55821531C62006450D2 /* ItemsPresenterInterface.swift in Sources */,
 				E37BB55A21531C62006450D2 /* ItemsCollectionViewProtocols.swift in Sources */,
-				E37BB55F21531C62006450D2 /* PremiereCollectionViewCellVM.swift in Sources */,
 				E37BB56C21531C62006450D2 /* TodayHeaderReusableView.swift in Sources */,
 				E37BB56A21531C62006450D2 /* ItemsViewController.swift in Sources */,
 				E37BB57221531C62006450D2 /* ItemsFactory.swift in Sources */,
 				E37BB54E21531C62006450D2 /* AppStoreCardDetailViewController.swift in Sources */,
 				E37BB54821531C62006450D2 /* CardContentView.swift in Sources */,
 				E37BB56E21531C62006450D2 /* ItemsRoutingInterface.swift in Sources */,
-				E37BB56121531C62006450D2 /* DayAppCollectionViewCellVM.swift in Sources */,
 				E37BB54A21531C62006450D2 /* CardCollectionViewCell.swift in Sources */,
 				E37BB55321531C62006450D2 /* LateralTranslationViewController.swift in Sources */,
 				E37BB54B21531C62006450D2 /* AppStoreCardsViewController.swift in Sources */,

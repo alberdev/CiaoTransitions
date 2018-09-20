@@ -51,7 +51,7 @@ extension ItemsCollectionViewProtocols: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if UIDevice.current.userInterfaceIdiom == .phone {
-            return CGSize(width: collectionView.bounds.width, height: BaseCollectionViewCell.cellHeight)
+            return CGSize(width: collectionView.bounds.width, height: 85.0)
         } else {
             
             // Number of Items per Row
@@ -80,7 +80,7 @@ extension ItemsCollectionViewProtocols: UICollectionViewDelegateFlowLayout {
                 width = isFirstItem ? expandedWidth : compressedWidth
             }
             
-            return CGSize(width: width, height: BaseCollectionViewCell.cellHeight)
+            return CGSize(width: width, height: 85.0)
         }
     }
     

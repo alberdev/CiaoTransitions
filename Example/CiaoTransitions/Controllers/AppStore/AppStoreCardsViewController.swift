@@ -14,9 +14,9 @@ class AppStoreCardsViewController: CiaoBaseViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     var cards = [[
-        CardContentView.ViewModel(image: UIImage(named: "IconList"), title: "Best latest\ngame releases", subtitle: "FEATURED APPS"),
-        CardContentView.ViewModel(image: UIImage(named: "IconList"), title: "Best latest\ngame releases", subtitle: "FEATURED APPS"),
-        CardContentView.ViewModel(image: UIImage(named: "IconList"), title: "Best latest\ngame releases", subtitle: "FEATURED APPS")]]
+        CardContentView.ViewModel(image: UIImage(named: "Image1"), title: "Best latest\nphotos sample 1", subtitle: "FEATURED IMAGES"),
+        CardContentView.ViewModel(image: UIImage(named: "Image2"), title: "Best latest\nphotos sample 2", subtitle: "FEATURED IMAGES"),
+        CardContentView.ViewModel(image: UIImage(named: "Image3"), title: "Best latest\nphotos sample 3", subtitle: "FEATURED IMAGES")]]
     
     override func viewDidLoad() {
         super.viewDidLoad()

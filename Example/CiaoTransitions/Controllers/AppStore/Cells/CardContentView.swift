@@ -34,7 +34,12 @@ import UIKit
         }
     }
     
-    var viewModel: ViewModel?
+    var viewModel: ViewModel? {
+        didSet {
+            guard let viewModel = viewModel else { return }
+            fill(withViewModel: viewModel)
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -50,7 +55,7 @@ import UIKit
         _ = fromNib()
         
         // This will make the background image stays still at the center while we animating
-        backdropImageView.contentMode = .center
+        // backdropImageView.contentMode = .center
     }
     
     private func fill(withViewModel viewModel: ViewModel) {

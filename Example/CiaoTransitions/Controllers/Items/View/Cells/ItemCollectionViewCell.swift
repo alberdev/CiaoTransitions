@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ItemCollectionViewCell: BaseCollectionViewCell {
+class ItemCollectionViewCell: UICollectionViewCell {
 
     struct ViewModel {
         var title: String?
