@@ -1,42 +1,42 @@
-#
-# Be sure to run `pod lib lint CiaoTransitions.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
-  s.name             = 'CiaoTransitions'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of CiaoTransitions.'
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
+# ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+s.platform = :ios
+s.ios.deployment_target = '11'
+s.name = "CiaoTransitions"
+s.summary = "With Ciao you can make fancy custom transitions. Use it in your iOS projects to make push and modal transitions between view controllers"
+s.requires_arc = true
+s.version = "0.1.0"
 
-  s.homepage         = 'https://github.com/alberdev/CiaoTransitions'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'alberdev' => 'albertokr@gmail.com' }
-  s.source           = { :git => 'https://github.com/alberdev/CiaoTransitions.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+# ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.ios.deployment_target = '8.0'
+s.license = { :type => "MIT", :file => "LICENSE" }
 
-  s.source_files = 'CiaoTransitions/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'CiaoTransitions' => ['CiaoTransitions/Assets/*.png']
-  # }
+# ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+s.author = { "Alberto Aznar" => "info@alberdev.com" }
+s.homepage = "https://github.com/alberdev/CiaoTransitions"
+
+# ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
+
+s.source = { :git => "https://github.com/alberdev/CiaoTransitions.git",
+:tag => "#{s.version}" }
+
+# ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
+
+s.framework = "UIKit"
+
+# ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
+
+s.source_files = "CiaoTransitions/**/*.{swift}"
+
+# ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
+
+# s.resources = "CiaoTransitions/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
+
+# ――― Swift Version ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
+
+s.swift_version = "4.2"
+
 end

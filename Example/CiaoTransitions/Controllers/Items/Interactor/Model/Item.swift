@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Ciao
+import CiaoTransitions
 
 enum Item {
     case push(image: UIImage?, title: String, subtitle: String, type: CiaoTransitionType.Push)

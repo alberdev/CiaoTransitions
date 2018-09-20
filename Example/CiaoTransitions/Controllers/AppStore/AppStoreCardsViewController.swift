@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Ciao
+import CiaoTransitions
 
 class AppStoreCardsViewController: CiaoBaseViewController {
 
