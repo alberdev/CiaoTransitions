@@ -42,7 +42,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ## Installation
 
 Ciao is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+it, simply add the following line to your Podfile and run `pod install`:
 
 ```ruby
 pod 'CiaoTransitions'
@@ -56,11 +56,11 @@ import CiaoTransitions
 
 ## Usage
 
-In the example you will see some custom transitions that can be used in your project. Once you've installed this pod, follow next steps. It's really simple:
+In the example you will see some custom transitions that can be used in your project. Once you've installed, follow next steps. It's really simple:
 
 ### 1. Subclass your presented view controller
 
-Subclass your presented view controller with `CiaoBaseViewController`. This will add `CiaoTransition` to your class. 
+Subclass your presented view controller with `CiaoBaseViewController`. This will add `CiaoTransition` object to your class. 
 
 ```swift
 class DetailViewController: CiaoBaseViewController {
@@ -78,7 +78,7 @@ class DetailViewController: CiaoBaseViewController {
 
 ### 2. Instace CiaoTransition with your values
 
-Before presenting your view controller, you need to create an instance of `CiaoTransition`. Use depending on Push or Modal transitions:
+Before presenting your view controller, you need to create an instance of `CiaoTransition` and add it to your presented view controller. Use custom init depending on Push or Modal transitions:
 
 ```swift
 // Push transitions
@@ -138,7 +138,7 @@ var dragLateralEnabled: Bool = false
 var dragDownEnabled: Bool = true
 ```
 
-And how can I add it? Simple:
+Then, you can pass these configuration params through CiaoTransition instance:
 
 ```swift
 let params = CiaoTransition.Params()
@@ -146,7 +146,7 @@ let ciaoTransition = CiaoTransition(pushTransitionType: CiaoTransitionType.Push.
 ```
 
 ### Scale Transition Params
-Scale transition params is required to make scale push transitions. For this, Ciao need some information about view you are going to scale. First create an instance of `CiaoTransition.ScaleParams` and add your custom params.
+Scale transition params is required to make scale push transitions. For this, Ciao need some information about view you are going to scale. First create an instance of `CiaoTransition.ScaleParams` and setup your custom params.
 
 ```swift
 /// Source image view is going to be scaled from your initial view controller
