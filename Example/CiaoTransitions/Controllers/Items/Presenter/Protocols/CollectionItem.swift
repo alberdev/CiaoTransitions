@@ -10,6 +10,6 @@ import UIKit
 import CiaoTransitions
 
 enum CollectionItem {
-    case push(image: UIImage?, title: String, subtitle: String, type: CiaoTransitionType.Push)
-    case modal(image: UIImage?, title: String, subtitle: String, type: CiaoTransitionType.Modal)
+    case push(image: UIImage?, title: String, subtitle: String, type: CiaoTransitionStyle)
+    case modal(image: UIImage?, title: String, subtitle: String, type: CiaoTransitionStyle)
 }

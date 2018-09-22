@@ -9,7 +9,7 @@
 import UIKit
 import CiaoTransitions
 
-class ScaleViewController: CiaoBaseViewController {
+class ScaleViewController: UIViewController {
 
     @IBOutlet weak var destinationImageView: UIImageView!
     

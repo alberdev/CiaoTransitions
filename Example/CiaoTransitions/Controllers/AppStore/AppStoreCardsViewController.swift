@@ -9,7 +9,7 @@
 import UIKit
 import CiaoTransitions
 
-class AppStoreCardsViewController: CiaoBaseViewController {
+class AppStoreCardsViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -113,14 +113,16 @@ extension AppStoreCardsViewController: UICollectionViewDelegate {
         let presentViewController = AppStoreCardDetailViewController()
         presentViewController.viewModel = cards[indexPath.section][indexPath.row]
         
-        var params = CiaoTransition.Params()
-        params.dragDownEnabled = true
-        params.dragLateralEnabled = false
+        var configurator = CiaoConfigurator()
+        configurator.dragDownEnabled = true
+        configurator.dragLateralEnabled = false
         
-        let ciaoTransition = CiaoTransition(modalTransitionType: .appStore, params: params, toViewTag: 100)
-        ciaoTransition.fromCell = cell
-        presentViewController.ciaoTransition = ciaoTransition
-        presentViewController.transitioningDelegate = ciaoTransition
+        let appStoreConfigurator = CiaoAppStoreConfigurator(fromCell: cell, toViewTag: 100)
+        
+        let transition = CiaoTransition(style: .appStore, configurator: configurator, appStoreConfigurator: appStoreConfigurator)
+        
+        presentViewController.ciaoTransition = transition
+        presentViewController.transitioningDelegate = transition
         
         // If `modalPresentationStyle` is not `.fullScreen`, this should be set to true
         // to make status bar depends on presented vc.

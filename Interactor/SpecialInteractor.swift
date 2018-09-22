@@ -1,14 +1,13 @@
 //
-//  CiaoTransitionModalInteractor.swift
-//  CiaoExample
+//  SpecialInteractor.swift
+//  CiaoTransitions
 //
-//  Created by Alberto Aznar de los Ríos on 19/9/18.
-//  Copyright © 2018 Alberto Aznar de los Ríos. All rights reserved.
+//  Created by Alberto Aznar de los Ríos on 22/9/18.
 //
 
 import UIKit
 
-public class CiaoModalTransitionInteractor: CiaoTransitionInteractor {
+public class SpecialInteractor: Interactor {
     
     struct Constants {
         static let topSafeAreaFixOnCardDetailEnabled = false
@@ -16,58 +15,15 @@ public class CiaoModalTransitionInteractor: CiaoTransitionInteractor {
         static let debugEnabled = false
     }
     
-    var navigationController: UINavigationController?
-    var presentedViewController: UIViewController?
     var interactiveStartingPoint: CGPoint?
     var dismissalAnimator: UIViewPropertyAnimator?
     var draggingDownToDismiss = false
-    var params: CiaoTransition.Params
     
-    final class DismissalPanGesture: UIPanGestureRecognizer {}
-    final class DismissalScreenEdgePanGesture: UIScreenEdgePanGestureRecognizer {}
-    
-    lazy var dismissalPanGesture: DismissalPanGesture = {
-        let pan = DismissalPanGesture()
-        pan.maximumNumberOfTouches = 1
-        return pan
-    }()
-    
-    lazy var dismissalScreenEdgePanGesture: DismissalScreenEdgePanGesture = {
-        let pan = DismissalScreenEdgePanGesture()
-        pan.edges = .left
-        return pan
-    }()
-    
-    override var scrollView: UIScrollView? {
-        didSet {
-            scrollView?.delegate = self
-            scrollView?.contentInsetAdjustmentBehavior = .never
-            scrollView?.panGestureRecognizer.require(toFail: dismissalScreenEdgePanGesture)
-            
-            if Constants.debugEnabled {
-                scrollView?.layer.borderWidth = 3
-                scrollView?.layer.borderColor = UIColor.green.cgColor
-                scrollView?.subviews.first!.layer.borderWidth = 3
-                scrollView?.subviews.first!.layer.borderColor = UIColor.purple.cgColor
-            }
-        }
-    }
-    
-    init(params: CiaoTransition.Params, navigationController: UINavigationController? = nil, presentedViewController: UIViewController? = nil) {
-        self.params = params
-        super.init()
-        self.navigationController = navigationController
-        self.presentedViewController = presentedViewController
-        self.completionCurve = .linear
-        setupGestures()
-    }
-    
-    private func setupGestures() {
-        dismissalPanGesture.addTarget(self, action: #selector(handleDismissalPan(gesture:)))
+    override func setupGestures() {
+        dismissalPanGesture.addTarget(self, action: #selector(panGestureHandler))
         dismissalPanGesture.delegate = self
-        dismissalScreenEdgePanGesture.addTarget(self, action: #selector(handleDismissalPan(gesture:)))
+        dismissalScreenEdgePanGesture.addTarget(self, action: #selector(panGestureHandler))
         dismissalScreenEdgePanGesture.delegate = self
-        // Make drag down/scroll pan gesture waits til screen edge pan to fail first to begin
         dismissalPanGesture.require(toFail: dismissalScreenEdgePanGesture)
         
         if params.dragLateralEnabled {
@@ -77,7 +33,7 @@ public class CiaoModalTransitionInteractor: CiaoTransitionInteractor {
             presentedViewController?.view.addGestureRecognizer(dismissalPanGesture)
         }
     }
-    
+   
     func didSuccessfullyDragDownToDismiss() {
         presentedViewController?.dismiss(animated: true)
     }
@@ -91,7 +47,7 @@ public class CiaoModalTransitionInteractor: CiaoTransitionInteractor {
         draggingDownToDismiss = false
     }
     
-    @objc func handleDismissalPan(gesture: UIPanGestureRecognizer) {
+    @objc func panGestureHandler(_ gesture : UIPanGestureRecognizer) {
         
         let isScreenEdgePan = gesture.isKind(of: DismissalScreenEdgePanGesture.self)
         let canStartDragDownToDismissPan = !isScreenEdgePan && !draggingDownToDismiss
@@ -181,26 +137,16 @@ public class CiaoModalTransitionInteractor: CiaoTransitionInteractor {
             fatalError("Impossible gesture state? \(gesture.state.rawValue)")
         }
     }
-}
-
-extension CiaoModalTransitionInteractor: UIGestureRecognizerDelegate {
     
-    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
-        return true
-    }
-}
-
-extension CiaoModalTransitionInteractor: UIScrollViewDelegate {
-    
-    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    override public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if draggingDownToDismiss || (scrollView.isTracking && scrollView.contentOffset.y < 0) {
             draggingDownToDismiss = true
             scrollView.contentOffset = .zero
         }
         scrollView.showsVerticalScrollIndicator = !draggingDownToDismiss
     }
-    
-    public func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+
+    override public func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         // Without this, when user drag down and lift the finger fast at the top, there'll be some scrolling going on.
         // This check prevents that.
         if velocity.y > 0 && scrollView.contentOffset.y <= 0 {

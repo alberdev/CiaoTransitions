@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PresentAppStoreAnimator: NSObject {
+class PresentAppStoreAnimator: Animator {
     
     struct Params {
         let fromCardFrame: CGRect
@@ -17,14 +17,12 @@ class PresentAppStoreAnimator: NSObject {
     }
     
     private let params: Params
-    private let scrollView: UIScrollView?
     private let presentAnimationDuration: TimeInterval
     private let springAnimator: UIViewPropertyAnimator
     private var transitionDriver: PresentAppStoreTransitionDriver?
     
-    init(params: Params, inScrollView scrollView: UIScrollView?) {
+    init(params: Params) {
         self.params = params
-        self.scrollView = scrollView
         self.springAnimator = PresentAppStoreAnimator.createBaseSpringAnimator(params: params)
         self.presentAnimationDuration = springAnimator.duration
         super.init()
@@ -50,28 +48,27 @@ class PresentAppStoreAnimator: NSObject {
     }
 }
 
-extension PresentAppStoreAnimator: UIViewControllerAnimatedTransitioning {
+extension PresentAppStoreAnimator {
     
-    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+    override func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return presentAnimationDuration
     }
     
-    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+    override func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         transitionDriver = PresentAppStoreTransitionDriver(params: params,
                                                        transitionContext: transitionContext,
-                                                       baseAnimator: springAnimator,
-                                                       inScrollView: scrollView)
+                                                       baseAnimator: springAnimator)
         interruptibleAnimator(using: transitionContext).startAnimation()
     }
     
     func animationEnded(_ transitionCompleted: Bool) {
         transitionDriver = nil
         params.fromCell.enableAnimations = true
+//        scrollView?.isScrollEnabled = true
     }
     
     func interruptibleAnimator(using transitionContext: UIViewControllerContextTransitioning) -> UIViewImplicitlyAnimating {
         return transitionDriver!.animator
     }
 }
-
 

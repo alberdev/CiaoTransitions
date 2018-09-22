@@ -15,11 +15,12 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [Configuration](#configuration)
-	- [Default Transition Params](#defaulttransitionparams)
-	- [Scale Transition Params](#scaletransitionparams)
+	- [CiaoConfigurator](#ciaoconfigurator)
+	- [CiaoScaleConfigurator](#ciaoscaleconfigurator)
+	- [CiaoAppStoreConfigurator](#ciaoappstoreconfigurator)
 - [Transition Types](#transitiontypes)
-	- [Push Transitions](#pushtransitions)
-	- [Modal Transitions](#modaltransitions)
+	- [Basic Transitions](#basictransitions)
+	- [Special Transitions](#specialtransitions)
 - [Author](#author)
 - [Credits](#credits)
 - [Contributing](#contributing)
@@ -62,143 +63,186 @@ import CiaoTransitions
 
 In the example you will see some custom transitions that can be used in your project. Once you've installed, follow next steps. It's really simple:
 
-### 1. Subclass your presented view controller
+### 1. Add CiaoTransition to your presented view controller
 
-Subclass your presented view controller with `CiaoBaseViewController`. This will add `CiaoTransition` object to your class. 
+Add `CiaoTransition` to your presented view controller. This is neccessary to save your retain your transition for dismissed interaction. Also you could need it if have some scroll view. In this case, you should set scroll view delegate to your `CiaoTransition`
 
 ```swift
 class DetailViewController: CiaoBaseViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
     
+    var ciaoTransition: CiaoTransition?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        ciaoTransition?.scrollView = scrollView
+        scrollView.delegate = ciaoTransition
     }
 }
 ```
 
-> Important: If the view have some **Scroll View**, you must add it to your transition object once view is loaded. This is needed by `CiaoTransition` to manage interactive transitions.
+> Important: If the view have some **Scroll View**, you must set his delegate to your transition object once view is loaded. This is needed by `CiaoTransition` to manage interactive transitions.
 
 ### 2. Instace CiaoTransition with your values
 
-Before presenting your view controller, you need to create an instance of `CiaoTransition` and add it to your presented view controller. Use custom init depending on Push or Modal transitions:
+Before presenting your view controller, you need to create an instance of `CiaoTransition` and add it to your presented view controller.
 
 ```swift
-// Push transitions
-let ciaoTransition = CiaoTransition(pushTransitionType: CiaoTransitionType.Push.pushLateral)
-
-// Modal transitions
-let ciaoTransition = CiaoTransition(modalTransitionType: CiaoTransitionType.Modal.appStore, toViewTag: 100)
+// How to instance a CiaoTransition object
+let ciaoTransition = CiaoTransition(
+							style: CiaoTransitionStyle, 
+							configurator: CiaoConfigurator? = nil, 
+							scaleConfigurator: CiaoScaleConfigurator? = nil, 
+							appStoreConfigurator: CiaoAppStoreConfigurator? = nil)
 ```
->**Modal transitions**: Tagging your expanded view in presented view controller is required to help `CiaoTransition` getting the view to make interactive transitions.
+>**CiaoConfigurator** is used to setup your custom values for transition animation
+>
+>**CiaoScaleConfigurator** is required to make `scale` style transitions
+>
+>**CiaoAppStoreConfigurator** is required to make `appStore` style transitions
+
 
 #### Example with Storyboard
 
 ```swift
 override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     guard let detailViewController = segue.destination as? DetailViewController else { return }
-    let ciaoTransition = CiaoTransition(pushTransitionType: CiaoTransitionType.Push.pushLateral)
+    let ciaoTransition = CiaoTransition(style: .vertical)
     detailViewController.ciaoTransition = ciaoTransition
     navigationController?.delegate = ciaoTransition
 }
 ```
 
-#### Example with Xibs
+#### Example push with Xibs
 ```swift
 func presentDetailView() {
-	let ciaoTransition = CiaoTransition(pushTransitionType: CiaoTransitionType.Push.pushLateral)
+	let ciaoTransition = CiaoTransition(style: .vertical)
 	let detailViewController = DetailViewController()
 	detailViewController.ciaoTransition = ciaoTransition
 	navigationController?.delegate = ciaoTransition
 	navigationController?.pushViewController(detailViewController, animated: true)
 }
 ```
+
+#### Example modal with Xibs
+```swift
+func presentDetailView() {
+	let ciaoTransition = CiaoTransition(style: .vertical)
+	let detailViewController = DetailViewController()
+	detailViewController.ciaoTransition = ciaoTransition
+	detailViewController.transitioningDelegate = ciaoTransition
+	present(detailViewController, animated: true, completion: nil)
+}
+```
+
 ## Configuration
 
-### Default Transition Params
-Customize your transition creating an instance of `CiaoTransition.Params`
+### CiaoConfigurator
+Customize your transition creating an instance of `CiaoConfigurator`
 
 ```swift
 /// Present animation duration
-var presentDuration: TimeInterval = 0.8
-    
+public var duration: TimeInterval = 0.8
+
+/// This block is executed when the view has been presented
+public var presentCompletion: (()->Void)? = nil
+
+/// This block is executed when the view has been dismissed
+public var dismissCompletion: (()->Void)? = nil
+
+/// Enable or disable fade effect on main view controller
+public var fadeOutEnabled = true
+
 /// Enable or disable fade effect on presented view controller
-var presentFadeEnabled: Bool = false
-    
-/// Enable or disable fade effect on back view on present & dismiss animation
-var backfadeEnabled: Bool = false
-    
-/// Enable or disable scale effect on back view on present & dismiss animation
-var backScaleEnabled: Bool = false
-    
-/// Enable or disable lateral translation on back view on present & dismiss animation
-var backLateralTranslationEnabled: Bool = false
-    
+public var fadeInEnabled = false
+
+/// Enable or disable scale 3d effect on back main view controller
+public var scale3D = true
+
+/// Enable or disable lateral translation on main view controller
+public var lateralTranslationEnabled = false
+
 /// Enable or disable lateral swipe to dismiss view
-var dragLateralEnabled: Bool = false
-    
+public var dragLateralEnabled = false
+
 /// Enable or disable vertical swipe to dismiss view
-var dragDownEnabled: Bool = true
+public var dragDownEnabled = true
 ```
 
 Then, you can pass these configuration params through CiaoTransition instance:
 
 ```swift
-let params = CiaoTransition.Params()
-let ciaoTransition = CiaoTransition(pushTransitionType: CiaoTransitionType.Push.pushLateral, params: params)
+let configurator = CiaoConfigurator()
+let ciaoTransition = CiaoTransition(style: .vertical, configurator: configurator)
 ```
 
-### Scale Transition Params
-Scale transition params is required to make scale push transitions. For this, Ciao need some information about view you are going to scale. First create an instance of `CiaoTransition.ScaleParams` and setup your custom params.
+### CiaoScaleConfigurator
+Scale transition configurator is required to make scale transitions. For this, Ciao need some information about view you are going to scale. First create an instance of `CiaoScaleConfigurator ` and setup your custom params.
 
 ```swift
 /// Source image view is going to be scaled from your initial view controller
-var sourceImageView: UIImageView
+public var scaleSourceImageView: UIImageView?
+    
 /// Source image view frame converted to superview in view controller.
-var sourceFrame: CGRect
+public var scaleSourceFrame: CGRect = .zero
+    
 /// This is the tag asigned to your image view in presented view controller
-var destImageViewTag: Int
+public var scaleDestImageViewTag: Int = 1000000000
+    
 /// Destination image view frame in presented view controller
-var destFrame: CGRect
+public var scaleDestFrame: CGRect = .zero
 ```
->To setup `sourceFrame` it's important convert rect in source image view frame to superview in view controller. See next example:
+>To setup `scaleSourceFrame ` it's important convert rect in source image view frame to superview in view controller. See next example:
 
 ```swift
 // Convert image view frame to view under collection view
 let rectInView = cell.convert(cell.imageView.frame, to: collectionView.superview)
-params.sourceFrame = rectInView
+scaleConfigurator.scaleSourceFrame = rectInView
 ```
->Tagging your image view in presented view controller is required to help `CiaoTransition` getting the view to make interactive transitions. Remember using the same tag in your image view & `destImageViewTag`
+>Tagging your image view in presented view controller is required to help `CiaoTransition` getting the view to make interactive transitions. Remember using the same tag in your image view & `scaleDestImageViewTag`
 
 ![Sample1](https://raw.githubusercontent.com/alberdev/CiaoTransitions/master/Images/sample_screenshot1.png)
 
 ```swift
-params.destImageViewTag = 100
+scaleConfigurator. scaleDestImageViewTag = 100
 ```
 
+### CiaoAppStoreConfigurator
+App Store transition configurator is required to simulate app store interactive transitions. For this, Ciao need some information about view you are going to scale. First create an instance of `CiaoAppStoreConfigurator` and setup your custom params.
+
+```swift
+/// Collection view cell used to expand the card view
+let fromCell: CiaoCardCollectionViewCell
+
+/// This is the tag asigned to your expanded view in presented view controller
+let toViewTag: Int
+```
+>See next example to instance the configurator:
+
+```swift
+let appStoreConfigurator = CiaoAppStoreConfigurator(fromCell: cell, toViewTag: 100)
+```
 
 ## Transition Types
 
-### Push Transitions
+### Basic Transitions
 
 ```swift
 /// Vertical transition. Drag down or lateral to dismiss the view (by default).
-CiaoTransitionType.Push.vertical
+CiaoTransitionStyle.vertical
 
 /// Lateral translation transition. Drag down or lateral to dismiss the view (by default).
-CiaoTransitionType.Push.lateral
+CiaoTransitionStyle.lateral
 
-/// Fade transition with scaled image. Drag down or lateral to dismiss the view (by default).
-CiaoTransitionType.Push.scaleImage
+/// Transition with scaled image. Drag down or lateral to dismiss the view (by default).
+CiaoTransitionStyle.scaleImage
 ```
 
-
-### Modal Transitions
+### Special Transitions
 
 ```swift
 /// Special simulated App Store transition. Drag down or lateral to dismiss the view (by default).
-CiaoTransitionType.Modal.appStore
+CiaoTransitionStyle.appStore
 ```
 
 ## Author

@@ -263,8 +263,8 @@
 		E37BB51F21531C61006450D2 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				E37BB52021531C61006450D2 /* CollectionItemsMapper.swift */,
 				E37BB52121531C61006450D2 /* ItemsCollectionViewProtocols.swift */,
+				E37BB52021531C61006450D2 /* CollectionItemsMapper.swift */,
 				E37BB52221531C61006450D2 /* CollectionItem.swift */,
 			);
 			path = Protocols;

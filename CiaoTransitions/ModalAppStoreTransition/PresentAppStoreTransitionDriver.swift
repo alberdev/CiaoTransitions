@@ -8,10 +8,18 @@
 
 import UIKit
 
+/// This will select how card is expanded in the collection view (for AppStore modal transition)
+enum PresentationStyle {
+    /// Expanding card pinning at the top of animatingContainerView
+    case fromTop
+    /// Expanding card pinning at the center of animatingContainerView
+    case fromCenter
+}
+
 class PresentAppStoreTransitionDriver {
     
     struct Constants {
-        static let presentationStyle = Globals.cardVerticalExpandingStyle
+        static let presentationStyle = PresentationStyle.fromTop
         static let debugEnabled = Globals.debugEnabled
         static let topInsetFixEnabled = Globals.topInsetFixEnabled
         static let cornerRadius = Globals.cardCornerRadius
@@ -19,7 +27,7 @@ class PresentAppStoreTransitionDriver {
     
     let animator: UIViewPropertyAnimator
     
-    init(params: PresentAppStoreAnimator.Params, transitionContext: UIViewControllerContextTransitioning, baseAnimator: UIViewPropertyAnimator, inScrollView scrollView: UIScrollView?) {
+    init(params: PresentAppStoreAnimator.Params, transitionContext: UIViewControllerContextTransitioning, baseAnimator: UIViewPropertyAnimator) {
         
         let ctx = transitionContext
         let container = ctx.containerView
@@ -144,7 +152,7 @@ class PresentAppStoreTransitionDriver {
             
             // No longer need the bottom constraint that pins bottom of card content to its root.
             // detail.cardBottomToRootBottomConstraint.isActive = false
-            scrollView?.isScrollEnabled = true
+//            scrollView?.isScrollEnabled = true
             
             let success = !ctx.transitionWasCancelled
             ctx.completeTransition(success)

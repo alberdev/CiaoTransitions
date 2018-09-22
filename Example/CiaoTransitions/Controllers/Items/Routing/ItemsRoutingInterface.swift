@@ -10,5 +10,5 @@ import UIKit
 
 protocol ItemsRoutingInterface {
     
-    func presentDetailView(cell: ItemCollectionViewCell, type: Any?, sourceRectImage: CGRect)
+    func presentDetailView(cell: ItemCollectionViewCell, item: CollectionItem)
 }

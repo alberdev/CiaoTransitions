@@ -9,17 +9,19 @@
 import UIKit
 import CiaoTransitions
 
-class AppStoreCardDetailViewController: CiaoBaseViewController {
+class AppStoreCardDetailViewController: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var cardContentView: CardContentView!
     @IBOutlet weak var textLabel: UILabel!
     
     var viewModel: CardContentView.ViewModel?
+    var ciaoTransition: CiaoTransition?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.clipsToBounds = true
         cardContentView.viewModel = viewModel
-        ciaoTransition?.scrollView = scrollView
+        scrollView.delegate = ciaoTransition
     }
 }

@@ -93,8 +93,8 @@ extension ItemsCollectionViewProtocols: UICollectionViewDelegateFlowLayout {
         let header = TodayHeaderReusableView.reuse(collectionView, indexPath: indexPath, kind: kind) as! TodayHeaderReusableView
         header.shouldShowProfileImageView = (indexPath.section == 0)
         switch indexPath.section {
-        case 0: header.viewModel = TodayHeaderReusableView.ViewModel(title: "Push Transitions", subtitle: "", image: nil)
-        case 1: header.viewModel = TodayHeaderReusableView.ViewModel(title: "Modal Transitions", subtitle: "", image: nil)
+        case 0: header.viewModel = TodayHeaderReusableView.ViewModel(title: "Basic Transitions", subtitle: "", image: nil)
+        case 1: header.viewModel = TodayHeaderReusableView.ViewModel(title: "Special Transitions", subtitle: "", image: nil)
         default: break
         }
         return header

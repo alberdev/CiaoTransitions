@@ -36,16 +36,6 @@ extension ItemsPresenter: ItemsInteractorOutput {
 extension ItemsPresenter: ItemsCollectionViewProtocolsDelegate {
 
     func collectionView(collectionView: UICollectionView, didSelectCell cell: ItemCollectionViewCell, withItem item: CollectionItem) {
-        
-        var type: Any?
-        switch item {
-        case let .push(_, _, _, pushType): type = pushType
-        case let .modal(_, _, _, modalType): type = modalType
-        }
-        
-        let rectInCell = cell.cornerView.convert(cell.itemImageView.frame, to: cell)
-        let rectInView = cell.convert(rectInCell, to: collectionView.superview)
-        
-        routing?.presentDetailView(cell: cell, type: type, sourceRectImage: rectInView)
+        routing?.presentDetailView(cell: cell, item: item)
     }
 }

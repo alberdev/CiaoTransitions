@@ -9,7 +9,7 @@
 import UIKit
 import CiaoTransitions
 
-class LateralTranslationViewController: CiaoBaseViewController {
+class LateralTranslationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

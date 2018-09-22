@@ -26,11 +26,9 @@ final class DismissAppStoreAnimator: NSObject {
     }
     
     private let params: Params
-    private var scrollView: UIScrollView?
     
-    init(params: Params, inScrollView scrollView: UIScrollView?) {
+    init(params: Params) {
         self.params = params
-        self.scrollView = scrollView
         super.init()
     }
 }
@@ -121,8 +119,8 @@ extension DismissAppStoreAnimator: UIViewControllerAnimatedTransitioning {
             ctx.completeTransition(success)
         }
         
-        UIView.animate(withDuration: transitionDuration(using: ctx) * 0.6) {
-            self.scrollView?.contentOffset = .zero
-        }
+//        UIView.animate(withDuration: transitionDuration(using: ctx) * 0.6) {
+//            self.scrollView?.contentOffset = .zero
+//        }
     }
 }

@@ -11,78 +11,82 @@ import CiaoTransitions
 
 class ItemsRouting: NSObject {
     var viewController: UIViewController?
+    var transition: CiaoTransition?
 }
 
 extension ItemsRouting: ItemsRoutingInterface {
     
-    func presentDetailView(cell: ItemCollectionViewCell, type: Any?, sourceRectImage: CGRect) {
+    func presentDetailView(cell: ItemCollectionViewCell, item: CollectionItem) {
         
-        var presentViewController: CiaoBaseViewController?
-        var params = CiaoTransition.Params()
-        var scaleParams: CiaoTransition.ScaleParams? = nil
-        var ciaoTransition: CiaoTransition?
-        
-        if let type = type as? CiaoTransitionType.Push {
-            
-            switch type {
-            case .vertical:
-                
-                params.backfadeEnabled = true
-                params.backScaleEnabled = true
-                params.backLateralTranslationEnabled = false
-                params.dragDownEnabled = true
-                params.dragLateralEnabled = false
-                presentViewController = cell.tag == 0 ? StaticFadeViewController() : ScrollFadeViewController()
-                
-            case .lateral:
-                
-                params.backfadeEnabled = true
-                params.backScaleEnabled = false
-                params.backLateralTranslationEnabled = true
-                params.dragDownEnabled = false
-                params.dragLateralEnabled = true
-                presentViewController = LateralTranslationViewController()
-                
-            case .scaleImage:
-                
-                params.backfadeEnabled = true
-                params.presentFadeEnabled = true
-                params.dragDownEnabled = true
-                params.dragLateralEnabled = false
-                
-                scaleParams = CiaoTransition.ScaleParams()
-                scaleParams?.sourceImageView = cell.itemImageView
-                scaleParams?.sourceFrame = sourceRectImage
-                scaleParams?.destImageViewTag = 100
-                scaleParams?.destFrame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 350)
-                presentViewController = ScaleViewController()
-            }
-            
-            ciaoTransition = CiaoTransition(pushTransitionType: type, params: params, scaleParams: scaleParams)
-            presentViewController?.ciaoTransition = ciaoTransition!
+        var style = CiaoTransitionStyle.vertical
+        switch item {
+        case let .push(_, _, _, type): style = type
+        case let .modal(_, _, _, type): style = type
         }
         
-        if let type = type as? CiaoTransitionType.Modal {
+        var presentViewController: UIViewController?
+        var configurator = CiaoConfigurator()
+        var scaleConfigurator: CiaoScaleConfigurator?
+        
+        switch style {
+        case .vertical:
             
-            switch type {
-            case .appStore:
+            configurator.dragDownEnabled = true
+            configurator.dragLateralEnabled = false
+            presentViewController = cell.tag == 0 ? StaticFadeViewController() : ScrollFadeViewController()
             
-                params.backfadeEnabled = true
-                params.backScaleEnabled = false
-                params.backLateralTranslationEnabled = true
-                params.dragDownEnabled = false
-                params.dragLateralEnabled = true
-                presentViewController = AppStoreCardsViewController()
-            }
+        case .lateral:
             
-            ciaoTransition = CiaoTransition(pushTransitionType: CiaoTransitionType.Push.lateral, params: params, scaleParams: scaleParams)
-            presentViewController?.ciaoTransition = ciaoTransition!
-        }
+            configurator.lateralTranslationEnabled = true
+            configurator.dragDownEnabled = false
+            configurator.dragLateralEnabled = true
+            presentViewController = LateralTranslationViewController()
+            
+        case .scaleImage:
+            
+            configurator.dragDownEnabled = true
+            configurator.dragLateralEnabled = false
+            configurator.fadeInEnabled = true
+            configurator.fadeOutEnabled = false
+            configurator.scale3D = false
+            
+            let rectInCell = cell.cornerView.convert(cell.itemImageView.frame, to: cell)
+            let rectInView = cell.convert(rectInCell, to: viewController?.view)
 
-        if let presentViewController = presentViewController {
-            viewController?.navigationController?.delegate = ciaoTransition
-            viewController?.navigationController?.pushViewController(presentViewController, animated: true)
+            scaleConfigurator = CiaoScaleConfigurator()
+            scaleConfigurator?.scaleSourceImageView = cell.itemImageView
+            scaleConfigurator?.scaleSourceFrame = rectInView
+            scaleConfigurator?.scaleDestImageViewTag = 100
+            scaleConfigurator?.scaleDestFrame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 350)
+            presentViewController = ScaleViewController()
+            
+        case .appStore:
+            
+            configurator.lateralTranslationEnabled = true
+            configurator.dragDownEnabled = false
+            configurator.dragLateralEnabled = true
+            presentViewController = AppStoreCardsViewController()
         }
+        
+        if style == .appStore {
+            style = .lateral
+        }
+        transition = CiaoTransition(style: style, configurator: configurator, scaleConfigurator: scaleConfigurator)
+        
+        if let presentViewController = presentViewController as? ScrollFadeViewController {
+            presentViewController.ciaoTransition = transition
+        }
+        presentViewController?.transitioningDelegate = transition
+        
+        switch item {
+        case .push:
+            viewController?.navigationController?.delegate = transition
+            viewController?.navigationController?.pushViewController(presentViewController!, animated: true)
+        case .modal:
+            viewController?.present(presentViewController!, animated: true, completion: nil)
+        }
+        
+        
     }
 }
 

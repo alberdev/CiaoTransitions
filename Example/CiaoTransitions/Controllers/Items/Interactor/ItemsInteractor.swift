@@ -21,32 +21,32 @@ extension ItemsInteractor: ItemsInteractorInput {
         let item1 = Item.push(
             image: UIImage(named: "Item1"),
             title: "Swipe down fade transition with static view",
-            subtitle: "PUSH TRANSITION",
-            type: CiaoTransitionType.Push.vertical)
+            subtitle: "BASIC TRANSITION",
+            type: .vertical)
         
         let item2 = Item.push(
             image: UIImage(named: "Item2"),
             title: "Swipe down fade transition with scroll view",
-            subtitle: "PUSH TRANSITION",
-            type: CiaoTransitionType.Push.vertical)
+            subtitle: "BASIC TRANSITION",
+            type: .vertical)
         
         let item3 = Item.push(
             image: UIImage(named: "Item3"),
             title: "Swipe lateral dismiss transition with static view",
-            subtitle: "PUSH TRANSITION",
-            type: CiaoTransitionType.Push.lateral)
+            subtitle: "BASIC TRANSITION",
+            type: .lateral)
         
         let item4 = Item.push(
             image: UIImage(named: "Item4"),
             title: "Scale transition & swipe down for dismiss",
-            subtitle: "PUSH TRANSITION",
-            type: CiaoTransitionType.Push.scaleImage)
+            subtitle: "BASIC TRANSITION",
+            type: .scaleImage)
         
-        let item5 = Item.modal(
+        let item5 = Item.push(
             image: UIImage(named: "Item5"),
             title: "App Store transition for present app details",
-            subtitle: "MODAL TRANSITION",
-            type: CiaoTransitionType.Modal.appStore)
+            subtitle: "SPECIAL TRANSITION",
+            type: .appStore)
         
         output?.didLoadItems(items: [[item1, item2, item3, item4], [item5]])
     }

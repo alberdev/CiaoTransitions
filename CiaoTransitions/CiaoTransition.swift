@@ -1,110 +1,33 @@
 //
-//  CiaoManager.swift
-//  CiaoExample
+//  Transition.swift
+//  CiaoTransitions
 //
-//  Created by Alberto Aznar de los Ríos on 11/9/18.
-//  Copyright © 2018 Alberto Aznar de los Ríos. All rights reserved.
+//  Created by Alberto Aznar de los Ríos on 21/9/18.
 //
 
 import UIKit
 
 open class CiaoTransition: NSObject {
     
-    public struct Params {
-        
-        public var presentDuration = Globals.presentAnimationDuration
-        public var presentFadeEnabled = Globals.presentFadeEnabled
-        public var backfadeEnabled = Globals.backfadeEnabled
-        public var backScaleEnabled = Globals.backScaleEnabled
-        public var backLateralTranslationEnabled = Globals.backLateralTranslationEnabled
-        public var dragLateralEnabled = Globals.dragLateralEnabled
-        public var dragDownEnabled = Globals.dragDownEnabled
-        
-        public init() {}
-    }
-    
-    public struct ScaleParams {
-        
-        public var sourceImageView: UIImageView?
-        public var sourceFrame: CGRect = CGRect.zero
-        public var destImageViewTag: Int = 100000000
-        public var destFrame: CGRect = CGRect.zero
-        
-        public init() {}
-    }
-    
-    private struct AppStoreParams {
-        var fromCardFrame: CGRect
-        var fromCardFrameWithoutTransform: CGRect
-        var fromCell: CiaoCardCollectionViewCell
-        var toViewTag: Int
-    }
+    /// Configurator let's you configure some parameters to customize the animation transition
+    private let configurator: CiaoConfigurator
+    private let scaleConfigurator: CiaoScaleConfigurator?
+    private let appStoreConfigurator: CiaoAppStoreConfigurator?
     
     /// Interactor controller & animator controller are used for transition animations.
     /// Interactor drives an interactive animation between one view controller and another.
     /// Animator is the place where fancy animations are implemented.
-    private var interactorController: CiaoTransitionInteractor?
-    private var animatorController: CiaoTransitionAnimator?
+    private var interactor: Interactor
+    private let animator: Animator
+    private let style: CiaoTransitionStyle
     
-    private var pushType: CiaoTransitionType.Push?
-    private var modalType: CiaoTransitionType.Modal?
-    private var params: Params
-    private var scaleParams: ScaleParams?
-    private var appstoreParams: AppStoreParams?
-    private var toViewTag: Int = 100000000
-    
-    open var fromCell: CiaoCardCollectionViewCell? {
-        didSet {
-            guard
-                let cell = fromCell,
-                let currentCellFrame = cell.layer.presentation()?.frame, // Get current frame on screen
-                let cardPresentationFrameOnScreen = cell.superview?.convert(currentCellFrame, to: nil)
-                else { return }
-            
-            cell.enableAnimations = false
-            
-            // Get card frame without transform in screen's coordinates
-            // (for the dismissing back later to original location)
-            let cardFrameWithoutTransform = { () -> CGRect in
-                let center = cell.center
-                let size = cell.bounds.size
-                let r = CGRect(
-                    x: center.x - size.width / 2,
-                    y: center.y - size.height / 2,
-                    width: size.width,
-                    height: size.height
-                )
-                return cell.superview!.convert(r, to: nil)
-            }()
-            
-            appstoreParams = CiaoTransition.AppStoreParams(
-                fromCardFrame: cardPresentationFrameOnScreen,
-                fromCardFrameWithoutTransform: cardFrameWithoutTransform,
-                fromCell: cell,
-                toViewTag: toViewTag)
-        }
-    }
-    
-    /// REQUIRED!
-    /// This is the view we use to get gestures and start the transition.
-    /// Is required to make transitions working.
-    /// Assign the scroll view or static view you want once view is loaded.
-    open var scrollView: UIScrollView? {
-        didSet {
-            interactorController?.scrollView = scrollView
-        }
-    }
-    
-    public init(pushTransitionType pushType: CiaoTransitionType.Push, params: Params = Params(), scaleParams: ScaleParams? = nil) {
-        self.pushType = pushType
-        self.params = params
-        self.scaleParams = scaleParams
-    }
-    
-    public init(modalTransitionType modalType: CiaoTransitionType.Modal, params: Params = Params(), toViewTag: Int) {
-        self.modalType = modalType
-        self.params = params
-        self.toViewTag = toViewTag
+    public init(style: CiaoTransitionStyle, configurator: CiaoConfigurator? = nil, scaleConfigurator: CiaoScaleConfigurator? = nil, appStoreConfigurator: CiaoAppStoreConfigurator? = nil) {
+        self.style = style
+        self.configurator = configurator ?? CiaoConfigurator()
+        self.scaleConfigurator = scaleConfigurator
+        self.appStoreConfigurator = appStoreConfigurator
+        self.animator = style.animator(configurator: self.configurator, scaleConfigurator: self.scaleConfigurator)
+        self.interactor = style.interactor(configurator: self.configurator)
     }
 }
 
@@ -115,21 +38,21 @@ open class CiaoTransition: NSObject {
 extension CiaoTransition: UINavigationControllerDelegate {
     
     public func navigationController(_ navigationController: UINavigationController, interactionControllerFor animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-        
-        guard let interactor = interactorController else { return nil }
-        return interactor.transitionInProgress ? interactorController : nil
+        return interactor.transitionInProgress ? interactor : nil
     }
     
     public func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        
+        if style == .appStore {
+            fatalError("App Store transition must be presented not pushed")
+        }
         if operation == .push {
-            interactorController = pushType?.interactorController(params: params, navigationController: toVC.navigationController, presentedViewController: toVC)
-            interactorController?.scrollView = scrollView
-            animatorController = pushType?.animatorController(direction: .present, params: params, scaleParams: scaleParams)
-            return animatorController
+            interactor.presentedViewController = toVC
+            interactor.navigationController = toVC.navigationController
+            animator.presenting = true
+            return animator
         } else {
-            animatorController = pushType?.animatorController(direction: .dismissal, params: params, scaleParams: scaleParams)
-            return animatorController
+            animator.presenting = false
+            return animator
         }
     }
 }
@@ -142,38 +65,63 @@ extension CiaoTransition: UINavigationControllerDelegate {
 extension CiaoTransition: UIViewControllerTransitioningDelegate {
     
     public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        guard let appstoreParams = appstoreParams else { return nil }
-        let presentParams = PresentAppStoreAnimator.Params.init(
-            fromCardFrame: appstoreParams.fromCardFrame,
-            fromCell: appstoreParams.fromCell,
-            toViewTag: appstoreParams.toViewTag
-        )
-        interactorController = modalType?.interactorController(params: params, presentedViewController: presented)
-        interactorController?.scrollView = scrollView
-        return PresentAppStoreAnimator(params: presentParams, inScrollView: scrollView)
+        interactor.presentedViewController = presented
+        
+        if style == .appStore, let appStoreConfigurator = appStoreConfigurator {
+            
+            let presentAppStoreParams = PresentAppStoreAnimator.Params.init(
+                fromCardFrame: appStoreConfigurator.fromCardFrame,
+                fromCell: appStoreConfigurator.fromCell,
+                toViewTag: appStoreConfigurator.toViewTag
+            )
+            return PresentAppStoreAnimator(params: presentAppStoreParams)
+            
+        } else {
+            animator.presenting = true
+            return animator
+        }
     }
     
     public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        guard let appstoreParams = appstoreParams else { return nil }
-        let params = DismissAppStoreAnimator.Params.init(
-            fromCardFrame: appstoreParams.fromCardFrame,
-            fromCardFrameWithoutTransform: appstoreParams.fromCardFrameWithoutTransform,
-            fromCell: appstoreParams.fromCell,
-            toViewTag: appstoreParams.toViewTag
-        )
-        return DismissAppStoreAnimator(params: params, inScrollView: scrollView)
+        if style == .appStore, let appStoreConfigurator = appStoreConfigurator {
+            
+            let presentAppStoreParams = DismissAppStoreAnimator.Params.init(
+                fromCardFrame: appStoreConfigurator.fromCardFrame,
+                fromCardFrameWithoutTransform: appStoreConfigurator.fromCardFrameWithoutTransform,
+                fromCell: appStoreConfigurator.fromCell,
+                toViewTag: appStoreConfigurator.toViewTag
+            )
+            return DismissAppStoreAnimator(params: presentAppStoreParams)
+            
+        } else {
+            animator.presenting = false
+            return animator
+        }
     }
     
     public func interactionControllerForPresentation(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
         return nil
     }
-    
+
     public func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-        guard let interactor = interactorController else { return nil }
-        return interactor.transitionInProgress ? interactorController : nil
+        return interactor.transitionInProgress ? interactor : nil
     }
-    
+
     public func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-        return CiaoModalPresentationController(presentedViewController: presented, presenting: presenting)
+        return style == .appStore ?
+            CiaoModalPresentationController(presentedViewController: presented, presenting: presenting) :
+            nil
     }
 }
+
+extension CiaoTransition: UIScrollViewDelegate {
+    
+    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        interactor.scrollViewDidScroll(scrollView)
+    }
+    
+    public func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        interactor.scrollViewWillEndDragging(scrollView, withVelocity: velocity, targetContentOffset: targetContentOffset)
+    }
+}
+

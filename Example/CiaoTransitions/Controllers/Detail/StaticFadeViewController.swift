@@ -9,7 +9,7 @@
 import UIKit
 import CiaoTransitions
 
-class StaticFadeViewController: CiaoBaseViewController {
+class StaticFadeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
