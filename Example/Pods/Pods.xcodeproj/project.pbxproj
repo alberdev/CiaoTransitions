@@ -194,13 +194,13 @@
 		783D49E05C7CD84B339F5BE1FF5DE688 /* CiaoTransitions */ = {
 			isa = PBXGroup;
 			children = (
+				E37BB58621531CF3006450D2 /* Globals.swift */,
 				E3B7C58D2154F13500B53272 /* CiaoTransition.swift */,
-				E3B7C5B22157069400B53272 /* Animator */,
 				E3B7C5A92157069400B53272 /* CiaoTransitionStyle.swift */,
 				E3B7C5AE2157069400B53272 /* Configurator */,
+				E3B7C5B22157069400B53272 /* Animator */,
 				E3B7C5AA2157069400B53272 /* Interactor */,
 				E37BB58221531CF3006450D2 /* Extensions */,
-				E37BB58621531CF3006450D2 /* Globals.swift */,
 				E37BB58921531CF4006450D2 /* ModalAppStoreTransition */,
 				E37BB57D21531CF3006450D2 /* Views */,
 				FBD68AFB3E284D591DE498827EDEF5A5 /* Pod */,
