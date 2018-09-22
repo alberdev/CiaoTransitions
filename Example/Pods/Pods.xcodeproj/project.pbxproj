@@ -22,19 +22,19 @@
 		E37BB5A821531CF5006450D2 /* PresentAppStoreTransitionDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BB58C21531CF4006450D2 /* PresentAppStoreTransitionDriver.swift */; };
 		E37BB5AA21531CF5006450D2 /* DismissAppStoreAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BB58F21531CF4006450D2 /* DismissAppStoreAnimator.swift */; };
 		E37BB5AC21531CF5006450D2 /* CiaoModalPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BB59121531CF4006450D2 /* CiaoModalPresentationController.swift */; };
-		E3B7C58C2154EB0D00B53272 /* BasicAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7C58B2154EB0D00B53272 /* BasicAnimator.swift */; };
 		E3B7C58E2154F13500B53272 /* CiaoTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7C58D2154F13500B53272 /* CiaoTransition.swift */; };
-		E3B7C590215503C800B53272 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7C58F215503C800B53272 /* Animator.swift */; };
-		E3B7C5922155073500B53272 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7C5912155073500B53272 /* Interactor.swift */; };
-		E3B7C5942155388900B53272 /* BasicVerticalAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7C5932155388900B53272 /* BasicVerticalAnimator.swift */; };
-		E3B7C596215542F900B53272 /* BasicLateralAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7C595215542F900B53272 /* BasicLateralAnimator.swift */; };
-		E3B7C598215643F200B53272 /* BasicScaleAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7C597215643F200B53272 /* BasicScaleAnimator.swift */; };
-		E3B7C59A21565FEC00B53272 /* SpecialInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7C59921565FEC00B53272 /* SpecialInteractor.swift */; };
-		E3B7C59C215662CE00B53272 /* BasicInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7C59B215662CE00B53272 /* BasicInteractor.swift */; };
-		E3B7C5A121568D6000B53272 /* CiaoTransitionStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7C5A021568D5F00B53272 /* CiaoTransitionStyle.swift */; };
-		E3B7C5A421568DA000B53272 /* CiaoConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7C5A321568DA000B53272 /* CiaoConfigurator.swift */; };
-		E3B7C5A621568DAA00B53272 /* CiaoScaleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7C5A521568DAA00B53272 /* CiaoScaleConfigurator.swift */; };
-		E3B7C5A821568DB400B53272 /* CiaoAppStoreConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7C5A721568DB400B53272 /* CiaoAppStoreConfigurator.swift */; };
+		E3B7C5B82157069500B53272 /* CiaoTransitionStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7C5A92157069400B53272 /* CiaoTransitionStyle.swift */; };
+		E3B7C5B92157069500B53272 /* SpecialInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7C5AB2157069400B53272 /* SpecialInteractor.swift */; };
+		E3B7C5BA2157069500B53272 /* BasicInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7C5AC2157069400B53272 /* BasicInteractor.swift */; };
+		E3B7C5BB2157069500B53272 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7C5AD2157069400B53272 /* Interactor.swift */; };
+		E3B7C5BC2157069500B53272 /* CiaoConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7C5AF2157069400B53272 /* CiaoConfigurator.swift */; };
+		E3B7C5BD2157069500B53272 /* CiaoScaleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7C5B02157069400B53272 /* CiaoScaleConfigurator.swift */; };
+		E3B7C5BE2157069500B53272 /* CiaoAppStoreConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7C5B12157069400B53272 /* CiaoAppStoreConfigurator.swift */; };
+		E3B7C5BF2157069500B53272 /* BasicScaleAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7C5B32157069400B53272 /* BasicScaleAnimator.swift */; };
+		E3B7C5C02157069500B53272 /* BasicAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7C5B42157069400B53272 /* BasicAnimator.swift */; };
+		E3B7C5C12157069500B53272 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7C5B52157069400B53272 /* Animator.swift */; };
+		E3B7C5C22157069500B53272 /* BasicLateralAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7C5B62157069400B53272 /* BasicLateralAnimator.swift */; };
+		E3B7C5C32157069500B53272 /* BasicVerticalAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7C5B72157069400B53272 /* BasicVerticalAnimator.swift */; };
 		E5ACE7A0DD4D638CA82CA0F0AD03A859 /* Pods-CiaoTransitions_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B390C8B30717FD7C50F9883DC2BF42E2 /* Pods-CiaoTransitions_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F36846526C95FA2E398AF9221750006F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -93,19 +93,19 @@
 		E37BB58C21531CF4006450D2 /* PresentAppStoreTransitionDriver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentAppStoreTransitionDriver.swift; sourceTree = "<group>"; };
 		E37BB58F21531CF4006450D2 /* DismissAppStoreAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissAppStoreAnimator.swift; sourceTree = "<group>"; };
 		E37BB59121531CF4006450D2 /* CiaoModalPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CiaoModalPresentationController.swift; sourceTree = "<group>"; };
-		E3B7C58B2154EB0D00B53272 /* BasicAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicAnimator.swift; sourceTree = "<group>"; };
 		E3B7C58D2154F13500B53272 /* CiaoTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CiaoTransition.swift; path = CiaoTransitions/CiaoTransition.swift; sourceTree = "<group>"; };
-		E3B7C58F215503C800B53272 /* Animator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
-		E3B7C5912155073500B53272 /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
-		E3B7C5932155388900B53272 /* BasicVerticalAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicVerticalAnimator.swift; sourceTree = "<group>"; };
-		E3B7C595215542F900B53272 /* BasicLateralAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicLateralAnimator.swift; sourceTree = "<group>"; };
-		E3B7C597215643F200B53272 /* BasicScaleAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicScaleAnimator.swift; sourceTree = "<group>"; };
-		E3B7C59921565FEC00B53272 /* SpecialInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialInteractor.swift; sourceTree = "<group>"; };
-		E3B7C59B215662CE00B53272 /* BasicInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicInteractor.swift; sourceTree = "<group>"; };
-		E3B7C5A021568D5F00B53272 /* CiaoTransitionStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CiaoTransitionStyle.swift; sourceTree = "<group>"; };
-		E3B7C5A321568DA000B53272 /* CiaoConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CiaoConfigurator.swift; sourceTree = "<group>"; };
-		E3B7C5A521568DAA00B53272 /* CiaoScaleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CiaoScaleConfigurator.swift; sourceTree = "<group>"; };
-		E3B7C5A721568DB400B53272 /* CiaoAppStoreConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CiaoAppStoreConfigurator.swift; sourceTree = "<group>"; };
+		E3B7C5A92157069400B53272 /* CiaoTransitionStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CiaoTransitionStyle.swift; path = CiaoTransitions/CiaoTransitionStyle.swift; sourceTree = "<group>"; };
+		E3B7C5AB2157069400B53272 /* SpecialInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialInteractor.swift; sourceTree = "<group>"; };
+		E3B7C5AC2157069400B53272 /* BasicInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicInteractor.swift; sourceTree = "<group>"; };
+		E3B7C5AD2157069400B53272 /* Interactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		E3B7C5AF2157069400B53272 /* CiaoConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CiaoConfigurator.swift; sourceTree = "<group>"; };
+		E3B7C5B02157069400B53272 /* CiaoScaleConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CiaoScaleConfigurator.swift; sourceTree = "<group>"; };
+		E3B7C5B12157069400B53272 /* CiaoAppStoreConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CiaoAppStoreConfigurator.swift; sourceTree = "<group>"; };
+		E3B7C5B32157069400B53272 /* BasicScaleAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicScaleAnimator.swift; sourceTree = "<group>"; };
+		E3B7C5B42157069400B53272 /* BasicAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicAnimator.swift; sourceTree = "<group>"; };
+		E3B7C5B52157069400B53272 /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
+		E3B7C5B62157069400B53272 /* BasicLateralAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicLateralAnimator.swift; sourceTree = "<group>"; };
+		E3B7C5B72157069400B53272 /* BasicVerticalAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicVerticalAnimator.swift; sourceTree = "<group>"; };
 		EB52807F48DB336CD92BE3740C95A4D0 /* CiaoTransitions.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CiaoTransitions.xcconfig; sourceTree = "<group>"; };
 		EDD17060623C34FFEF6E7B4A44601EF8 /* CiaoTransitions.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CiaoTransitions.modulemap; sourceTree = "<group>"; };
 		F3E8B327B1E81CB5A047B593385C9966 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -195,10 +195,10 @@
 			isa = PBXGroup;
 			children = (
 				E3B7C58D2154F13500B53272 /* CiaoTransition.swift */,
-				E3B7C5A021568D5F00B53272 /* CiaoTransitionStyle.swift */,
-				E3B7C5A221568D9200B53272 /* Configurator */,
-				E3B7C59F21568D3A00B53272 /* Interactor */,
-				E3B7C59E21568D3400B53272 /* Animator */,
+				E3B7C5B22157069400B53272 /* Animator */,
+				E3B7C5A92157069400B53272 /* CiaoTransitionStyle.swift */,
+				E3B7C5AE2157069400B53272 /* Configurator */,
+				E3B7C5AA2157069400B53272 /* Interactor */,
 				E37BB58221531CF3006450D2 /* Extensions */,
 				E37BB58621531CF3006450D2 /* Globals.swift */,
 				E37BB58921531CF4006450D2 /* ModalAppStoreTransition */,
@@ -296,36 +296,39 @@
 			path = CiaoTransitions/ModalAppStoreTransition;
 			sourceTree = "<group>";
 		};
-		E3B7C59E21568D3400B53272 /* Animator */ = {
+		E3B7C5AA2157069400B53272 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				E3B7C58F215503C800B53272 /* Animator.swift */,
-				E3B7C58B2154EB0D00B53272 /* BasicAnimator.swift */,
-				E3B7C5932155388900B53272 /* BasicVerticalAnimator.swift */,
-				E3B7C595215542F900B53272 /* BasicLateralAnimator.swift */,
-				E3B7C597215643F200B53272 /* BasicScaleAnimator.swift */,
+				E3B7C5AB2157069400B53272 /* SpecialInteractor.swift */,
+				E3B7C5AC2157069400B53272 /* BasicInteractor.swift */,
+				E3B7C5AD2157069400B53272 /* Interactor.swift */,
 			);
-			path = Animator;
+			name = Interactor;
+			path = CiaoTransitions/Interactor;
 			sourceTree = "<group>";
 		};
-		E3B7C59F21568D3A00B53272 /* Interactor */ = {
+		E3B7C5AE2157069400B53272 /* Configurator */ = {
 			isa = PBXGroup;
 			children = (
-				E3B7C5912155073500B53272 /* Interactor.swift */,
-				E3B7C59B215662CE00B53272 /* BasicInteractor.swift */,
-				E3B7C59921565FEC00B53272 /* SpecialInteractor.swift */,
+				E3B7C5AF2157069400B53272 /* CiaoConfigurator.swift */,
+				E3B7C5B02157069400B53272 /* CiaoScaleConfigurator.swift */,
+				E3B7C5B12157069400B53272 /* CiaoAppStoreConfigurator.swift */,
 			);
-			path = Interactor;
+			name = Configurator;
+			path = CiaoTransitions/Configurator;
 			sourceTree = "<group>";
 		};
-		E3B7C5A221568D9200B53272 /* Configurator */ = {
+		E3B7C5B22157069400B53272 /* Animator */ = {
 			isa = PBXGroup;
 			children = (
-				E3B7C5A321568DA000B53272 /* CiaoConfigurator.swift */,
-				E3B7C5A521568DAA00B53272 /* CiaoScaleConfigurator.swift */,
-				E3B7C5A721568DB400B53272 /* CiaoAppStoreConfigurator.swift */,
+				E3B7C5B32157069400B53272 /* BasicScaleAnimator.swift */,
+				E3B7C5B42157069400B53272 /* BasicAnimator.swift */,
+				E3B7C5B52157069400B53272 /* Animator.swift */,
+				E3B7C5B62157069400B53272 /* BasicLateralAnimator.swift */,
+				E3B7C5B72157069400B53272 /* BasicVerticalAnimator.swift */,
 			);
-			path = Configurator;
+			name = Animator;
+			path = CiaoTransitions/Animator;
 			sourceTree = "<group>";
 		};
 		FBD68AFB3E284D591DE498827EDEF5A5 /* Pod */ = {
@@ -502,28 +505,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3B7C5A621568DAA00B53272 /* CiaoScaleConfigurator.swift in Sources */,
-				E3B7C590215503C800B53272 /* Animator.swift in Sources */,
-				E3B7C59C215662CE00B53272 /* BasicInteractor.swift in Sources */,
+				E3B7C5C12157069500B53272 /* Animator.swift in Sources */,
 				E37BB59E21531CF5006450D2 /* CiaoCardCollectionViewCell.swift in Sources */,
 				E37BB5A121531CF5006450D2 /* UIView+Tools.swift in Sources */,
-				E3B7C5A121568D6000B53272 /* CiaoTransitionStyle.swift in Sources */,
+				E3B7C5BA2157069500B53272 /* BasicInteractor.swift in Sources */,
 				E37BB5AC21531CF5006450D2 /* CiaoModalPresentationController.swift in Sources */,
+				E3B7C5C02157069500B53272 /* BasicAnimator.swift in Sources */,
 				078ED389B8BA9526BD00C057CCF218D5 /* CiaoTransitions-dummy.m in Sources */,
+				E3B7C5B82157069500B53272 /* CiaoTransitionStyle.swift in Sources */,
+				E3B7C5C22157069500B53272 /* BasicLateralAnimator.swift in Sources */,
+				E3B7C5C32157069500B53272 /* BasicVerticalAnimator.swift in Sources */,
 				E3B7C58E2154F13500B53272 /* CiaoTransition.swift in Sources */,
-				E3B7C5942155388900B53272 /* BasicVerticalAnimator.swift in Sources */,
 				E37BB5A821531CF5006450D2 /* PresentAppStoreTransitionDriver.swift in Sources */,
-				E3B7C58C2154EB0D00B53272 /* BasicAnimator.swift in Sources */,
-				E3B7C598215643F200B53272 /* BasicScaleAnimator.swift in Sources */,
-				E3B7C5A421568DA000B53272 /* CiaoConfigurator.swift in Sources */,
 				E37BB5A421531CF5006450D2 /* Globals.swift in Sources */,
 				E37BB5A721531CF5006450D2 /* PresentAppStoreAnimator.swift in Sources */,
-				E3B7C59A21565FEC00B53272 /* SpecialInteractor.swift in Sources */,
-				E3B7C596215542F900B53272 /* BasicLateralAnimator.swift in Sources */,
+				E3B7C5BF2157069500B53272 /* BasicScaleAnimator.swift in Sources */,
 				E37BB5A221531CF5006450D2 /* UIImageView+Copy.swift in Sources */,
-				E3B7C5922155073500B53272 /* Interactor.swift in Sources */,
-				E3B7C5A821568DB400B53272 /* CiaoAppStoreConfigurator.swift in Sources */,
+				E3B7C5B92157069500B53272 /* SpecialInteractor.swift in Sources */,
+				E3B7C5BB2157069500B53272 /* Interactor.swift in Sources */,
+				E3B7C5BE2157069500B53272 /* CiaoAppStoreConfigurator.swift in Sources */,
+				E3B7C5BD2157069500B53272 /* CiaoScaleConfigurator.swift in Sources */,
 				E37BB5AA21531CF5006450D2 /* DismissAppStoreAnimator.swift in Sources */,
+				E3B7C5BC2157069500B53272 /* CiaoConfigurator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
