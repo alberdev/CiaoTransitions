@@ -90,10 +90,10 @@ Before presenting your view controller, you need to create an instance of `CiaoT
 ```swift
 // How to instance a CiaoTransition object
 let ciaoTransition = CiaoTransition(
-							style: CiaoTransitionStyle, 
-							configurator: CiaoConfigurator? = nil, 
-							scaleConfigurator: CiaoScaleConfigurator? = nil, 
-							appStoreConfigurator: CiaoAppStoreConfigurator? = nil)
+		style: CiaoTransitionStyle, 
+		configurator: CiaoConfigurator? = nil, 
+		scaleConfigurator: CiaoScaleConfigurator? = nil, 
+		appStoreConfigurator: CiaoAppStoreConfigurator? = nil)
 ```
 >**CiaoConfigurator** is used to setup your custom values for transition animation
 >

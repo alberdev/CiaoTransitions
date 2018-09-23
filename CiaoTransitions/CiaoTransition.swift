@@ -41,7 +41,7 @@ extension CiaoTransition: UINavigationControllerDelegate {
         return interactor.transitionInProgress ? interactor : nil
     }
     
-    public func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    public func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         if style == .appStore {
             fatalError("App Store transition must be presented not pushed")
         }

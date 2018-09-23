@@ -72,7 +72,7 @@ extension BasicAnimator {
         }
         
         containerView.addSubview(toView)
-        containerView.bringSubview(toFront: detailView)
+        containerView.bringSubviewToFront(detailView)
         
         // Image scaling
         if
@@ -88,7 +88,7 @@ extension BasicAnimator {
             containerView.addSubview(transitionView!)
         }
         
-        UIView.animateKeyframes(withDuration: params.duration, delay: 0.0, options: UIViewKeyframeAnimationOptions.calculationModeLinear, animations: { () -> Void in
+        UIView.animateKeyframes(withDuration: params.duration, delay: 0.0, options: UIView.KeyframeAnimationOptions.calculationModeLinear, animations: { () -> Void in
         //UIView.animate(withDuration: params.duration, delay:0.0, usingSpringWithDamping: 0.0, initialSpringVelocity: 0.0, animations: {
             
             if

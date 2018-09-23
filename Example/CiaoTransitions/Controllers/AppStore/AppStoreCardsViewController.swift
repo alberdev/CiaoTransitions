@@ -37,7 +37,7 @@ class AppStoreCardsViewController: UIViewController {
         collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0)
         
         CardCollectionViewCell.register(nibFor: collectionView)
-        TodayHeaderReusableView.register(nibFor: collectionView, kind: UICollectionElementKindSectionHeader)
+        TodayHeaderReusableView.register(nibFor: collectionView, kind: UICollectionView.elementKindSectionHeader)
     }
 }
 

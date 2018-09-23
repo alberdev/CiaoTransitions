@@ -33,7 +33,7 @@ extension ItemsViewController: ItemsViewInterface {
     func setupCollectionView(protocols: ItemsCollectionViewProtocols?) {
         
         ItemCollectionViewCell.register(nibFor: collectionView)
-        TodayHeaderReusableView.register(nibFor: collectionView, kind: UICollectionElementKindSectionHeader)
+        TodayHeaderReusableView.register(nibFor: collectionView, kind: UICollectionView.elementKindSectionHeader)
         
         collectionView.dataSource = protocols
         collectionView.delegate = protocols
