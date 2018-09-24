@@ -65,10 +65,10 @@ In the example you will see some custom transitions that can be used in your pro
 
 ### 1. Add CiaoTransition to your presented view controller
 
-Add `CiaoTransition` to your presented view controller. This is neccessary to save your retain your transition for dismissed interaction. Also you could need it if have some scroll view. In this case, you should set scroll view delegate to your `CiaoTransition`
+Add `CiaoTransition` to your presented view controller. This is neccessary to save your retain your transition for dismissed interaction. Also you could need it if have some scroll view. In this case, you should call  `didScroll` method when the view is scrolled
 
 ```swift
-class DetailViewController: CiaoBaseViewController {
+class DetailViewController: CiaoBaseViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var scrollView: UIScrollView!
     
@@ -76,12 +76,16 @@ class DetailViewController: CiaoBaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        scrollView.delegate = ciaoTransition
+        scrollView.delegate = self
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        ciaoTransition?.didScroll(scrollView)
     }
 }
 ```
 
-> Important: If the view have some **Scroll View**, you must set his delegate to your transition object once view is loaded. This is needed by `CiaoTransition` to manage interactive transitions.
+> Important: If the view have some **Scroll View**, you must implement UIScrollViewDelegate protocol and call  `didScroll` method when the view is scrolled. This is needed by `CiaoTransition` to manage interactive transitions.
 
 ### 2. Instace CiaoTransition with your values
 

@@ -12,6 +12,7 @@ import CiaoTransitions
 class AppStoreCardsViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    var ciaoTransition: CiaoTransition?
     
     var cards = [[
         CardContentView.ViewModel(image: UIImage(named: "Image1"), title: "Best latest\nphotos sample 1", subtitle: "FEATURED IMAGES"),
@@ -103,9 +104,6 @@ extension AppStoreCardsViewController: UICollectionViewDataSource, UICollectionV
         header.viewModel = TodayHeaderReusableView.ViewModel(title: "Today", subtitle: "APPSTORE CARDS TRANSITION", image: UIImage(named: "Profile"))
         return header
     }
-}
-
-extension AppStoreCardsViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
@@ -131,3 +129,11 @@ extension AppStoreCardsViewController: UICollectionViewDelegate {
         present(presentViewController, animated: true, completion: nil)
     }
 }
+    
+extension AppStoreCardsViewController: UIScrollViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        ciaoTransition?.didScroll(scrollView)
+    }
+}
+

@@ -63,17 +63,20 @@ extension ItemsRouting: ItemsRoutingInterface {
         case .appStore:
             
             configurator.lateralTranslationEnabled = true
-            configurator.dragDownEnabled = false
-            configurator.dragLateralEnabled = true
+            configurator.dragDownEnabled = true
+            configurator.dragLateralEnabled = false
             presentViewController = AppStoreCardsViewController()
         }
         
         if style == .appStore {
-            style = .lateral
+            style = .vertical
         }
         transition = CiaoTransition(style: style, configurator: configurator, scaleConfigurator: scaleConfigurator)
         
         if let presentViewController = presentViewController as? ScrollFadeViewController {
+            presentViewController.ciaoTransition = transition
+        }
+        if let presentViewController = presentViewController as? AppStoreCardsViewController {
             presentViewController.ciaoTransition = transition
         }
         presentViewController?.transitioningDelegate = transition

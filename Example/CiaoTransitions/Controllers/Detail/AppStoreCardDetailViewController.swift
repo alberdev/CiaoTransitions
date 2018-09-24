@@ -9,7 +9,7 @@
 import UIKit
 import CiaoTransitions
 
-class AppStoreCardDetailViewController: UIViewController {
+class AppStoreCardDetailViewController: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var cardContentView: CardContentView!
@@ -22,6 +22,10 @@ class AppStoreCardDetailViewController: UIViewController {
         super.viewDidLoad()
         view.clipsToBounds = true
         cardContentView.viewModel = viewModel
-        scrollView.delegate = ciaoTransition
+        scrollView.delegate = self
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        ciaoTransition?.didScroll(scrollView)
     }
 }

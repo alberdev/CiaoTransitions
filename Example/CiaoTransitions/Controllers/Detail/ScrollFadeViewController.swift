@@ -9,19 +9,19 @@
 import UIKit
 import CiaoTransitions
 
-class ScrollFadeViewController: UIViewController {
+class ScrollFadeViewController: UIViewController, UIScrollViewDelegate {
  
     @IBOutlet weak var scrollView: UIScrollView!
     var ciaoTransition: CiaoTransition?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        scrollView.delegate = ciaoTransition
+        scrollView.delegate = self
     }
     
-//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        transition?.didScroll(scrollView: scrollView)
-//    }
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        ciaoTransition?.didScroll(scrollView)
+    }
 }
 
 

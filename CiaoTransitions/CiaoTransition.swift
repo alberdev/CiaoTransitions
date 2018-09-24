@@ -29,6 +29,10 @@ open class CiaoTransition: NSObject {
         self.animator = style.animator(configurator: self.configurator, scaleConfigurator: self.scaleConfigurator)
         self.interactor = style.interactor(configurator: self.configurator)
     }
+    
+    public func didScroll(_ scrollView: UIScrollView) {
+        interactor.scrollViewDidScroll(scrollView)
+    }
 }
 
 /// PUSH & POP
@@ -114,14 +118,14 @@ extension CiaoTransition: UIViewControllerTransitioningDelegate {
     }
 }
 
-extension CiaoTransition: UIScrollViewDelegate {
-    
-    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        interactor.scrollViewDidScroll(scrollView)
-    }
-    
-    public func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        interactor.scrollViewWillEndDragging(scrollView, withVelocity: velocity, targetContentOffset: targetContentOffset)
-    }
-}
+//extension CiaoTransition: UIScrollViewDelegate {
+//
+//    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//
+//    }
+//
+//    public func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+//        interactor.scrollViewWillEndDragging(scrollView, withVelocity: velocity, targetContentOffset: targetContentOffset)
+//    }
+//}
 
