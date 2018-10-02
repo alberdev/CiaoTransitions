@@ -38,6 +38,6 @@ extension ItemsViewController: ItemsViewInterface {
         collectionView.dataSource = protocols
         collectionView.delegate = protocols
         collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0)
+        collectionView.contentInsetAdjustmentBehavior = .never
     }
-    
 }

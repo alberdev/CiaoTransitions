@@ -28,6 +28,11 @@ public class BasicInteractor: Interactor {
         }
     }
     
+    public override func enableGestures() {
+        dismissalPanGesture.delegate = self
+        dismissalScreenEdgePanGesture.delegate = self
+    }
+    
     private func dismissView() {
         if isNavigationEnabled {
             navigationController?.popViewController(animated: true)

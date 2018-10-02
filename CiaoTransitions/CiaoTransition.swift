@@ -33,6 +33,16 @@ open class CiaoTransition: NSObject {
     public func didScroll(_ scrollView: UIScrollView) {
         interactor.scrollViewDidScroll(scrollView)
     }
+    
+    /// Enable gesture interactive transitions on dismiss
+    public func enable() {
+        interactor.enableGestures()
+    }
+    
+    /// Disable gesture interactive transitions on dismiss
+    public func disable() {
+        interactor.disableGestures()
+    }
 }
 
 /// PUSH & POP

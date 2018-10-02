@@ -81,13 +81,13 @@ extension ItemsRouting: ItemsRoutingInterface {
         }
         presentViewController?.transitioningDelegate = transition
         
-        switch item {
-        case .push:
-            viewController?.navigationController?.delegate = transition
-            viewController?.navigationController?.pushViewController(presentViewController!, animated: true)
-        case .modal:
+//        switch item {
+//        case .push:
+//            viewController?.navigationController?.delegate = transition
+//            viewController?.navigationController?.pushViewController(presentViewController!, animated: true)
+//        case .modal:
             viewController?.present(presentViewController!, animated: true, completion: nil)
-        }
+//        }
         
         
     }

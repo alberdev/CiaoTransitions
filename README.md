@@ -139,6 +139,20 @@ func presentDetailView() {
 }
 ```
 
+#### Example modal with Navigation Controller
+```swift
+func presentDetailView() {
+let ciaoTransition = CiaoTransition(style: .vertical)
+let detailViewController = DetailViewController()
+detailViewController.ciaoTransition = ciaoTransition
+
+let navigationController = UINavigationController(rootViewController: detailViewController)
+navigationController.transitioningDelegate = ciaoTransition
+
+present(navigationController, animated: true, completion: nil)
+}
+```
+
 ## Configuration
 
 ### CiaoConfigurator
@@ -247,6 +261,17 @@ CiaoTransitionStyle.scaleImage
 ```swift
 /// Special simulated App Store transition. Drag down or lateral to dismiss the view (by default).
 CiaoTransitionStyle.appStore
+```
+
+## Extra
+Additionally you can enable or disable dismiss gesture transitions whenever you want. 
+
+```swift
+// Enable gesture interactive transitions on dismiss
+ciaoTransition.enable()
+
+// Disable gesture interactive transitions on dismiss
+ciaoTransition.disable()
 ```
 
 ## Author

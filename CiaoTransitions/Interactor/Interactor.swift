@@ -59,6 +59,15 @@ public class Interactor: UIPercentDrivenInteractiveTransition {
     public func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         
     }
+    
+    public func disableGestures() {
+        dismissalPanGesture.delegate = nil
+        dismissalScreenEdgePanGesture.delegate = nil
+    }
+    
+    public func enableGestures() {
+        
+    }
 }
 
 extension Interactor: UIGestureRecognizerDelegate {
