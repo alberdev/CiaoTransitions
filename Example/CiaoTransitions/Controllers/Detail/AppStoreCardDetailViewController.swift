@@ -13,7 +13,7 @@ class AppStoreCardDetailViewController: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var cardContentView: CardContentView!
-    @IBOutlet weak var textLabel: UILabel!
+    @IBOutlet weak var button: UIButton!
     
     var viewModel: CardContentView.ViewModel?
     var ciaoTransition: CiaoTransition?
@@ -23,6 +23,15 @@ class AppStoreCardDetailViewController: UIViewController, UIScrollViewDelegate {
         view.clipsToBounds = true
         cardContentView.viewModel = viewModel
         scrollView.delegate = self
+        button.layer.cornerRadius = 18
+    }
+    
+    @IBAction func didSelectBuyButton(_ sender: UIButton) {
+        let vc = ModalViewController()
+        let nav = UINavigationController(rootViewController: vc)
+        nav.modalPresentationStyle = .overCurrentContext
+        nav.navigationBar.isTranslucent = true
+        present(nav, animated: true, completion: nil)
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

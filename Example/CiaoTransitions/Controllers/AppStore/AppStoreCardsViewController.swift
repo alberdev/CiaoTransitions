@@ -122,9 +122,9 @@ extension AppStoreCardsViewController: UICollectionViewDataSource, UICollectionV
         
         presentViewController.ciaoTransition = transition
         presentViewController.transitioningDelegate = transition
-        
-        // If `modalPresentationStyle` is not `.fullScreen`, this should be set to true
-        // to make status bar depends on presented vc.
+//
+//        // If `modalPresentationStyle` is not `.fullScreen`, this should be set to true
+//        // to make status bar depends on presented vc.
         presentViewController.modalPresentationCapturesStatusBarAppearance = true
         presentViewController.modalPresentationStyle = .custom
         present(presentViewController, animated: true, completion: nil)

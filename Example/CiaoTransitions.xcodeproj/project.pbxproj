@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		6687D84564793FEA4F0BD4BF /* Pods_CiaoTransitions_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA0E1B417B317148D7160AF2 /* Pods_CiaoTransitions_Example.framework */; };
+		E365D676225E4B600060DF8E /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E365D674225E4B600060DF8E /* ModalViewController.swift */; };
+		E365D677225E4B600060DF8E /* ModalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E365D675225E4B600060DF8E /* ModalViewController.xib */; };
 		E37BB54521531C62006450D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BB50421531C61006450D2 /* AppDelegate.swift */; };
 		E37BB54621531C62006450D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E37BB50621531C61006450D2 /* Assets.xcassets */; };
 		E37BB54721531C62006450D2 /* CardContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E37BB50A21531C61006450D2 /* CardContentView.xib */; };
@@ -59,6 +61,8 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		AA0E1B417B317148D7160AF2 /* Pods_CiaoTransitions_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CiaoTransitions_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D97778A98AB01DD756A3ED07 /* CiaoTransitions.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CiaoTransitions.podspec; path = ../CiaoTransitions.podspec; sourceTree = "<group>"; };
+		E365D674225E4B600060DF8E /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
+		E365D675225E4B600060DF8E /* ModalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModalViewController.xib; sourceTree = "<group>"; };
 		E37BB50421531C61006450D2 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E37BB50621531C61006450D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E37BB50A21531C61006450D2 /* CardContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardContentView.xib; sourceTree = "<group>"; };
@@ -225,15 +229,17 @@
 			isa = PBXGroup;
 			children = (
 				E37BB51121531C61006450D2 /* ScrollFadeViewController.swift */,
+				E37BB51921531C61006450D2 /* ScrollFadeViewController.xib */,
 				E37BB51221531C61006450D2 /* AppStoreCardDetailViewController.swift */,
-				E37BB51321531C61006450D2 /* LateralTranslationViewController.xib */,
-				E37BB51421531C61006450D2 /* ScaleViewController.swift */,
-				E37BB51521531C61006450D2 /* StaticFadeViewController.xib */,
 				E37BB51621531C61006450D2 /* AppStoreCardDetailViewController.xib */,
 				E37BB51721531C61006450D2 /* LateralTranslationViewController.swift */,
-				E37BB51821531C61006450D2 /* ScaleViewController.xib */,
-				E37BB51921531C61006450D2 /* ScrollFadeViewController.xib */,
+				E37BB51321531C61006450D2 /* LateralTranslationViewController.xib */,
 				E37BB51A21531C61006450D2 /* StaticFadeViewController.swift */,
+				E37BB51521531C61006450D2 /* StaticFadeViewController.xib */,
+				E37BB51421531C61006450D2 /* ScaleViewController.swift */,
+				E37BB51821531C61006450D2 /* ScaleViewController.xib */,
+				E365D674225E4B600060DF8E /* ModalViewController.swift */,
+				E365D675225E4B600060DF8E /* ModalViewController.xib */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -433,6 +439,7 @@
 				E37BB54C21531C62006450D2 /* AppStoreCardsViewController.xib in Resources */,
 				E37BB54F21531C62006450D2 /* LateralTranslationViewController.xib in Resources */,
 				E37BB56921531C62006450D2 /* ItemsViewController.xib in Resources */,
+				E365D677225E4B600060DF8E /* ModalViewController.xib in Resources */,
 				E37BB55121531C62006450D2 /* StaticFadeViewController.xib in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				E37BB54621531C62006450D2 /* Assets.xcassets in Resources */,
@@ -512,6 +519,7 @@
 				E37BB55E21531C62006450D2 /* ItemCollectionViewCell.swift in Sources */,
 				E37BB55021531C62006450D2 /* ScaleViewController.swift in Sources */,
 				E37BB54521531C62006450D2 /* AppDelegate.swift in Sources */,
+				E365D676225E4B600060DF8E /* ModalViewController.swift in Sources */,
 				E37BB57421531C62006450D2 /* UICollectionViewCell+Tools.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
