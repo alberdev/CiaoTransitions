@@ -21,6 +21,7 @@
 - [Transition Types](#transitiontypes)
 	- [Basic Transitions](#basictransitions)
 	- [Special Transitions](#specialtransitions)
+- [Apps using CiaoTransitions](#apps-using-ciaotransitions)
 - [Author](#author)
 - [Credits](#credits)
 - [Contributing](#contributing)
@@ -274,6 +275,12 @@ ciaoTransition.enable()
 ciaoTransition.disable()
 ```
 
+## Apps using CiaoTransitions
+
+If you use `CiaoTransitions` I'd love to hear about it and feature your app here!
+
+<img src="Images/Apps/fashtime.png" width="50" height="50" valign="middle"> [FashTime](https://itunes.apple.com/app/fashtime-the-new-way/id1126538070?mt=8)
+
 ## Author
 
 Alberto Aznar, info@alberdev.com
@@ -283,6 +290,8 @@ Alberto Aznar, info@alberdev.com
 I used open source project [iOS 11 App Store Transition](https://github.com/aunnnn/AppStoreiOS11InteractiveTransition) made by [Wirawit Rueopas](https://github.com/aunnnn) to simulate one of transitions.
 
 ## Contributing
+
+Feel free to collaborate with ideas 💭, issues ⁉️ and/or pull requests 🔃.
 
 1. Fork it!
 2. Create your feature branch: `git checkout -b my-new-feature`
