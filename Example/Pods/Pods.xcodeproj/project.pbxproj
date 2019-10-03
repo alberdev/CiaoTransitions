@@ -7,378 +7,323 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		078ED389B8BA9526BD00C057CCF218D5 /* CiaoTransitions-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A298BC02AC4E20407CC0E915DA0F2AFF /* CiaoTransitions-dummy.m */; };
-		4F7A963FCFA9489A43636E5A07CB5EEF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		725E6F0F8E42FF41EDBE0A69BDDDB2B5 /* Pods-CiaoTransitions_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2FFBC44829E42A49B06DBAE8E35122 /* Pods-CiaoTransitions_Tests-dummy.m */; };
-		7D5933FE346397E470AAB6BEBE2851AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		82B706663D480669D6CEF647DF550A9C /* Pods-CiaoTransitions_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 013114A97E5CB5B1D9D0640EA6E690EC /* Pods-CiaoTransitions_Example-dummy.m */; };
-		9DB8DF5CA43277D67EC8EE5614882D50 /* Pods-CiaoTransitions_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F8F26183B54EB0F2D7DDD508972E0BE /* Pods-CiaoTransitions_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AB1DEBAE8480BECFE41F7267E62880D4 /* CiaoTransitions-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FE6063D8570EA8F5600B0871B4759EA0 /* CiaoTransitions-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E37BB59E21531CF5006450D2 /* CiaoCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BB57F21531CF3006450D2 /* CiaoCardCollectionViewCell.swift */; };
-		E37BB5A121531CF5006450D2 /* UIView+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BB58321531CF3006450D2 /* UIView+Tools.swift */; };
-		E37BB5A221531CF5006450D2 /* UIImageView+Copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BB58421531CF3006450D2 /* UIImageView+Copy.swift */; };
-		E37BB5A421531CF5006450D2 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BB58621531CF3006450D2 /* Globals.swift */; };
-		E37BB5A721531CF5006450D2 /* PresentAppStoreAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BB58B21531CF4006450D2 /* PresentAppStoreAnimator.swift */; };
-		E37BB5A821531CF5006450D2 /* PresentAppStoreTransitionDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BB58C21531CF4006450D2 /* PresentAppStoreTransitionDriver.swift */; };
-		E37BB5AA21531CF5006450D2 /* DismissAppStoreAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BB58F21531CF4006450D2 /* DismissAppStoreAnimator.swift */; };
-		E37BB5AC21531CF5006450D2 /* CiaoModalPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BB59121531CF4006450D2 /* CiaoModalPresentationController.swift */; };
-		E3B7C58E2154F13500B53272 /* CiaoTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7C58D2154F13500B53272 /* CiaoTransition.swift */; };
-		E3B7C5B82157069500B53272 /* CiaoTransitionStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7C5A92157069400B53272 /* CiaoTransitionStyle.swift */; };
-		E3B7C5B92157069500B53272 /* SpecialInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7C5AB2157069400B53272 /* SpecialInteractor.swift */; };
-		E3B7C5BA2157069500B53272 /* BasicInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7C5AC2157069400B53272 /* BasicInteractor.swift */; };
-		E3B7C5BB2157069500B53272 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7C5AD2157069400B53272 /* Interactor.swift */; };
-		E3B7C5BC2157069500B53272 /* CiaoConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7C5AF2157069400B53272 /* CiaoConfigurator.swift */; };
-		E3B7C5BD2157069500B53272 /* CiaoScaleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7C5B02157069400B53272 /* CiaoScaleConfigurator.swift */; };
-		E3B7C5BE2157069500B53272 /* CiaoAppStoreConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7C5B12157069400B53272 /* CiaoAppStoreConfigurator.swift */; };
-		E3B7C5BF2157069500B53272 /* BasicScaleAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7C5B32157069400B53272 /* BasicScaleAnimator.swift */; };
-		E3B7C5C02157069500B53272 /* BasicAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7C5B42157069400B53272 /* BasicAnimator.swift */; };
-		E3B7C5C12157069500B53272 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7C5B52157069400B53272 /* Animator.swift */; };
-		E3B7C5C22157069500B53272 /* BasicLateralAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7C5B62157069400B53272 /* BasicLateralAnimator.swift */; };
-		E3B7C5C32157069500B53272 /* BasicVerticalAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7C5B72157069400B53272 /* BasicVerticalAnimator.swift */; };
-		E5ACE7A0DD4D638CA82CA0F0AD03A859 /* Pods-CiaoTransitions_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B390C8B30717FD7C50F9883DC2BF42E2 /* Pods-CiaoTransitions_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F36846526C95FA2E398AF9221750006F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		04BA99CEC3C238615A1571843581D1A5 /* CiaoCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842271C24736CCE96C95CBEBAF6B3380 /* CiaoCardCollectionViewCell.swift */; };
+		086224437466801E36229526E0CEA31C /* CiaoTransitions-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CB62195C4BEDECC61E62006E410A0FD9 /* CiaoTransitions-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		08B5BE15E179C39923E3F0011C3154BE /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0609366C64B6D8A553822261075D302 /* Interactor.swift */; };
+		170B9DA212A95B423624AB0E048F1BE0 /* PresentAppStoreAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A16CEB1DECB7B1959E8B5B240A828F9 /* PresentAppStoreAnimator.swift */; };
+		18C94C136E0071BCDBB09FCECA6CB48D /* BasicInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE72874BEF0BBE59F2E1223F736E783 /* BasicInteractor.swift */; };
+		1A5A4192218B5D199F5821708F033904 /* CiaoConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99A6A18DDDFF0BA49F90A015CF6CBC7 /* CiaoConfigurator.swift */; };
+		1BF3489E5FD239231A150682F36EEC75 /* Pods-CiaoTransitions_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C345EBC015DFC51E5625588DDBAAEA9C /* Pods-CiaoTransitions_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1EDA55B063B42568327E762D76F2396B /* CiaoTransitions-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FCF1D2EED6FE70835B735CA3499C138 /* CiaoTransitions-dummy.m */; };
+		252F58293564574989D7FDA95981767F /* BasicVerticalAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E40C3A4452AD257447EDB791178A52 /* BasicVerticalAnimator.swift */; };
+		25AFDCA9E601AC1A8FC85E32441D29F2 /* UIView+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3CECC3110533BE29BCB900F56EA429 /* UIView+Tools.swift */; };
+		2726A899891E3AFA07D88493675F3EE1 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1C9E822469C0E906EFE3ED5932DF6A /* Animator.swift */; };
+		2C2514BB549C7CD415480820B6BD2ADE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */; };
+		31BB93FD99AD7E8D5D2E594EEA4D46A0 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CF0B4DEDCA7A67877EFCC02DCE1C27 /* Globals.swift */; };
+		386A294DC25B2DFDA578710C20DF7A8E /* DismissAppStoreAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19412A8193F8CE27CE45CE5A0D41D036 /* DismissAppStoreAnimator.swift */; };
+		3F2FE249E90D5D99CEEADF037729D8C7 /* CiaoTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F94E9DA801DCB8997FEA64C21C1596 /* CiaoTransition.swift */; };
+		461ADCD7FDD7F5A6BFD637B61F9BC8A2 /* PresentAppStoreTransitionDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0021C920DDA28251474BDE54E789697 /* PresentAppStoreTransitionDriver.swift */; };
+		5D28F6F04DFE27D794071DE92E7183D8 /* BasicAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17599175E792C5B1549988835FAA7626 /* BasicAnimator.swift */; };
+		783356195F9FBF4E7947AA33272FC2C2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF2A2B0720AE923C22BED3192888BE0 /* UIKit.framework */; };
+		79D49A2960CB3EF85964EAD6CE155231 /* SpecialInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71AA24CAD084AEE48153EF259BDFB4B /* SpecialInteractor.swift */; };
+		8E8F8B67E3B1AB065C53AB4AA60FB52E /* CiaoAppStoreConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ADF16602A213C04846289652408A2B /* CiaoAppStoreConfigurator.swift */; };
+		8FAE3C0A88861F257088AEBDD5C0948E /* CiaoModalPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178668F7CFF68C76C65358A6C2FADAD1 /* CiaoModalPresentationController.swift */; };
+		A24898A81C8B57355062C08CE9D73EFF /* Pods-CiaoTransitions_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F87B3ADBBD148C2DF9B5856A05696FB0 /* Pods-CiaoTransitions_Example-dummy.m */; };
+		B89D56B551FBD6CDB7AF9AFA3C4BB0CC /* UIImageView+Copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA61CD6C20E3336F8B6F85D09173A8A /* UIImageView+Copy.swift */; };
+		B936E5CD22EE60C9FBA395A54C652ED7 /* BasicScaleAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448849B7CE3BFBDD1A201B513A4D821E /* BasicScaleAnimator.swift */; };
+		BA6FEB1209086BFA529420F02647B3C1 /* CiaoScaleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A1B1ADE9A413F3A08D73F29E7C584D /* CiaoScaleConfigurator.swift */; };
+		C8829BD4920D4166E2F8761FB1E96E3E /* BasicLateralAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297DC2B3544F0B8591540DB5CCAC56E9 /* BasicLateralAnimator.swift */; };
+		EFD78532D466614D4C76B1480AC1FA5F /* CiaoTransitionStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4705A2BF9EEA019A76848BD7F1E16B82 /* CiaoTransitionStyle.swift */; };
+		F605E4B683EFA3A5423B6AB8F8104AD2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		685983C4886310A5D8F66AC8F9AC2DCF /* PBXContainerItemProxy */ = {
+		505736A09FC9EB5D7F4F0D9C57FD108A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 94C03205E8B797D3012A5EFE81201039;
-			remoteInfo = "Pods-CiaoTransitions_Example";
-		};
-		899DB178CC1BA6DEE47D1B40CB9BA5BF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 064B664BE9138C73CEA29C5CCB1141DB;
+			remoteGlobalIDString = 44D33A34608EEEEF66031A371015EE7A;
 			remoteInfo = CiaoTransitions;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		010BD5308A902CBC83BA42B4F034A2CE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		013114A97E5CB5B1D9D0640EA6E690EC /* Pods-CiaoTransitions_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CiaoTransitions_Example-dummy.m"; sourceTree = "<group>"; };
-		06EB2DCE9D66A3D8ABD3686B9C7C44C2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		0F8F26183B54EB0F2D7DDD508972E0BE /* Pods-CiaoTransitions_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CiaoTransitions_Tests-umbrella.h"; sourceTree = "<group>"; };
-		167DE7E663F326E4175B2C5C1432B643 /* Pods-CiaoTransitions_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CiaoTransitions_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		1D6ACFA48FB6E5CB5D525F0AC2CCCB79 /* Pods-CiaoTransitions_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CiaoTransitions_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		1F44935ABAA5233617611A887D55FA05 /* Pods-CiaoTransitions_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CiaoTransitions_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		20EC20139723C8BFB49F52417693657E /* Pods-CiaoTransitions_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CiaoTransitions_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		2779BAB75200E9ED6D28F14B054AA7B4 /* Pods_CiaoTransitions_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CiaoTransitions_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		392DF46ABD3DC79122955BCBB54A2689 /* Pods-CiaoTransitions_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CiaoTransitions_Example-frameworks.sh"; sourceTree = "<group>"; };
-		456F760CF075DF3FB9C13B01F2CC606D /* Pods-CiaoTransitions_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CiaoTransitions_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		46962C5DB7FDC891DF13F421AD7FC052 /* Pods-CiaoTransitions_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CiaoTransitions_Example-resources.sh"; sourceTree = "<group>"; };
-		48F8BFADB83868C72D65B64C73959DD8 /* Pods-CiaoTransitions_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CiaoTransitions_Example.release.xcconfig"; sourceTree = "<group>"; };
-		4E2FFBC44829E42A49B06DBAE8E35122 /* Pods-CiaoTransitions_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CiaoTransitions_Tests-dummy.m"; sourceTree = "<group>"; };
-		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		670658BD4F604E32EF5488D0EBA88484 /* Pods-CiaoTransitions_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CiaoTransitions_Tests-resources.sh"; sourceTree = "<group>"; };
-		73BD39603EF48252973BB5B6F40E3D2A /* Pods-CiaoTransitions_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CiaoTransitions_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		83FB697E2205B3C4779A1AF605160D6D /* Pods-CiaoTransitions_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CiaoTransitions_Tests.modulemap"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		93B00B8B535542A854DDA1B61E8364C0 /* Pods_CiaoTransitions_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CiaoTransitions_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		95D870EE4F939B161DB880D7B012F58E /* Pods-CiaoTransitions_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CiaoTransitions_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		A298BC02AC4E20407CC0E915DA0F2AFF /* CiaoTransitions-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CiaoTransitions-dummy.m"; sourceTree = "<group>"; };
-		A7739890A4511C4F731486CDC23EA35C /* CiaoTransitions.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = CiaoTransitions.podspec; sourceTree = "<group>"; };
-		B390C8B30717FD7C50F9883DC2BF42E2 /* Pods-CiaoTransitions_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CiaoTransitions_Example-umbrella.h"; sourceTree = "<group>"; };
-		CA3BCFCC03FAA6F11D019777FC7CDC4B /* CiaoTransitions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CiaoTransitions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D1E817028D1DBF80E857D740D2E27CD4 /* CiaoTransitions-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CiaoTransitions-prefix.pch"; sourceTree = "<group>"; };
-		D6C46F25C8B713B8204B76306BCD4A9E /* Pods-CiaoTransitions_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CiaoTransitions_Example.modulemap"; sourceTree = "<group>"; };
-		D72F7A39170DE842A7AD17753D6DFA3E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E37BB57F21531CF3006450D2 /* CiaoCardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CiaoCardCollectionViewCell.swift; sourceTree = "<group>"; };
-		E37BB58321531CF3006450D2 /* UIView+Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Tools.swift"; sourceTree = "<group>"; };
-		E37BB58421531CF3006450D2 /* UIImageView+Copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Copy.swift"; sourceTree = "<group>"; };
-		E37BB58621531CF3006450D2 /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Globals.swift; path = CiaoTransitions/Globals.swift; sourceTree = "<group>"; };
-		E37BB58B21531CF4006450D2 /* PresentAppStoreAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentAppStoreAnimator.swift; sourceTree = "<group>"; };
-		E37BB58C21531CF4006450D2 /* PresentAppStoreTransitionDriver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentAppStoreTransitionDriver.swift; sourceTree = "<group>"; };
-		E37BB58F21531CF4006450D2 /* DismissAppStoreAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissAppStoreAnimator.swift; sourceTree = "<group>"; };
-		E37BB59121531CF4006450D2 /* CiaoModalPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CiaoModalPresentationController.swift; sourceTree = "<group>"; };
-		E3B7C58D2154F13500B53272 /* CiaoTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CiaoTransition.swift; path = CiaoTransitions/CiaoTransition.swift; sourceTree = "<group>"; };
-		E3B7C5A92157069400B53272 /* CiaoTransitionStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CiaoTransitionStyle.swift; path = CiaoTransitions/CiaoTransitionStyle.swift; sourceTree = "<group>"; };
-		E3B7C5AB2157069400B53272 /* SpecialInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialInteractor.swift; sourceTree = "<group>"; };
-		E3B7C5AC2157069400B53272 /* BasicInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicInteractor.swift; sourceTree = "<group>"; };
-		E3B7C5AD2157069400B53272 /* Interactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
-		E3B7C5AF2157069400B53272 /* CiaoConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CiaoConfigurator.swift; sourceTree = "<group>"; };
-		E3B7C5B02157069400B53272 /* CiaoScaleConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CiaoScaleConfigurator.swift; sourceTree = "<group>"; };
-		E3B7C5B12157069400B53272 /* CiaoAppStoreConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CiaoAppStoreConfigurator.swift; sourceTree = "<group>"; };
-		E3B7C5B32157069400B53272 /* BasicScaleAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicScaleAnimator.swift; sourceTree = "<group>"; };
-		E3B7C5B42157069400B53272 /* BasicAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicAnimator.swift; sourceTree = "<group>"; };
-		E3B7C5B52157069400B53272 /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
-		E3B7C5B62157069400B53272 /* BasicLateralAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicLateralAnimator.swift; sourceTree = "<group>"; };
-		E3B7C5B72157069400B53272 /* BasicVerticalAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicVerticalAnimator.swift; sourceTree = "<group>"; };
-		EB52807F48DB336CD92BE3740C95A4D0 /* CiaoTransitions.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CiaoTransitions.xcconfig; sourceTree = "<group>"; };
-		EDD17060623C34FFEF6E7B4A44601EF8 /* CiaoTransitions.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CiaoTransitions.modulemap; sourceTree = "<group>"; };
-		F3E8B327B1E81CB5A047B593385C9966 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F7A29D3F66A6BD4FA3869D01847DB0F6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		FE459F6CE8856763B3CC2C46EFD5DEC5 /* Pods-CiaoTransitions_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CiaoTransitions_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		FE6063D8570EA8F5600B0871B4759EA0 /* CiaoTransitions-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CiaoTransitions-umbrella.h"; sourceTree = "<group>"; };
+		0CA61CD6C20E3336F8B6F85D09173A8A /* UIImageView+Copy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIImageView+Copy.swift"; sourceTree = "<group>"; };
+		17599175E792C5B1549988835FAA7626 /* BasicAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BasicAnimator.swift; sourceTree = "<group>"; };
+		178668F7CFF68C76C65358A6C2FADAD1 /* CiaoModalPresentationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CiaoModalPresentationController.swift; sourceTree = "<group>"; };
+		19412A8193F8CE27CE45CE5A0D41D036 /* DismissAppStoreAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DismissAppStoreAnimator.swift; sourceTree = "<group>"; };
+		1EE72874BEF0BBE59F2E1223F736E783 /* BasicInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BasicInteractor.swift; sourceTree = "<group>"; };
+		23DB55CF6A86B1E0150D409DA08D52F3 /* Pods-CiaoTransitions_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CiaoTransitions_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		297DC2B3544F0B8591540DB5CCAC56E9 /* BasicLateralAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BasicLateralAnimator.swift; sourceTree = "<group>"; };
+		2FCF1D2EED6FE70835B735CA3499C138 /* CiaoTransitions-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CiaoTransitions-dummy.m"; sourceTree = "<group>"; };
+		3D3CECC3110533BE29BCB900F56EA429 /* UIView+Tools.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+Tools.swift"; sourceTree = "<group>"; };
+		40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		448849B7CE3BFBDD1A201B513A4D821E /* BasicScaleAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BasicScaleAnimator.swift; sourceTree = "<group>"; };
+		4705A2BF9EEA019A76848BD7F1E16B82 /* CiaoTransitionStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CiaoTransitionStyle.swift; path = CiaoTransitions/CiaoTransitionStyle.swift; sourceTree = "<group>"; };
+		68CF0B4DEDCA7A67877EFCC02DCE1C27 /* Globals.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Globals.swift; path = CiaoTransitions/Globals.swift; sourceTree = "<group>"; };
+		6A16CEB1DECB7B1959E8B5B240A828F9 /* PresentAppStoreAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PresentAppStoreAnimator.swift; sourceTree = "<group>"; };
+		6DA9940C9FD6E41A8FAC6EFE3B0D49AC /* Pods_CiaoTransitions_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CiaoTransitions_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		737A7668CD6E64E2B4A87535D56DE71E /* CiaoTransitions.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CiaoTransitions.xcconfig; sourceTree = "<group>"; };
+		7421157F4A2FEF51BA10AEB44D76ACDA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		7494D378399A5D8B8C7E4AB3BEE4979A /* CiaoTransitions-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CiaoTransitions-prefix.pch"; sourceTree = "<group>"; };
+		7848D66B674F515AD27AB980B89EA6A2 /* Pods-CiaoTransitions_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CiaoTransitions_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		83E40C3A4452AD257447EDB791178A52 /* BasicVerticalAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BasicVerticalAnimator.swift; sourceTree = "<group>"; };
+		842271C24736CCE96C95CBEBAF6B3380 /* CiaoCardCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CiaoCardCollectionViewCell.swift; sourceTree = "<group>"; };
+		8AEE63F8319BBAE2E4572C2123112F44 /* Pods-CiaoTransitions_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CiaoTransitions_Example-Info.plist"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A1F94E9DA801DCB8997FEA64C21C1596 /* CiaoTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CiaoTransition.swift; path = CiaoTransitions/CiaoTransition.swift; sourceTree = "<group>"; };
+		AFD49DB2E53384790A2B452D3043080F /* Pods-CiaoTransitions_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CiaoTransitions_Example-frameworks.sh"; sourceTree = "<group>"; };
+		B0021C920DDA28251474BDE54E789697 /* PresentAppStoreTransitionDriver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PresentAppStoreTransitionDriver.swift; sourceTree = "<group>"; };
+		B0609366C64B6D8A553822261075D302 /* Interactor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		B0A1B1ADE9A413F3A08D73F29E7C584D /* CiaoScaleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CiaoScaleConfigurator.swift; sourceTree = "<group>"; };
+		B4243FC4CA94D5A3E7DC1E05FCE73254 /* CiaoTransitions.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CiaoTransitions.modulemap; sourceTree = "<group>"; };
+		B71AA24CAD084AEE48153EF259BDFB4B /* SpecialInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SpecialInteractor.swift; sourceTree = "<group>"; };
+		BC1CD5070B368A2331E04CD609A72230 /* Pods-CiaoTransitions_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CiaoTransitions_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		C345EBC015DFC51E5625588DDBAAEA9C /* Pods-CiaoTransitions_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CiaoTransitions_Example-umbrella.h"; sourceTree = "<group>"; };
+		CB62195C4BEDECC61E62006E410A0FD9 /* CiaoTransitions-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CiaoTransitions-umbrella.h"; sourceTree = "<group>"; };
+		CB91FCBA6EED9A28F0123D02991CB828 /* Pods-CiaoTransitions_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CiaoTransitions_Example.modulemap"; sourceTree = "<group>"; };
+		D8D26C1B7B07B31BB3F6468397ED3F84 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E544FBA2D1D9FAC74534C3FD5D611206 /* Pods-CiaoTransitions_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CiaoTransitions_Example.release.xcconfig"; sourceTree = "<group>"; };
+		E99A6A18DDDFF0BA49F90A015CF6CBC7 /* CiaoConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CiaoConfigurator.swift; sourceTree = "<group>"; };
+		ECF2A2B0720AE923C22BED3192888BE0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		EE79E2CD4A9EABE8BC39C178FEA5489B /* CiaoTransitions.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = CiaoTransitions.podspec; sourceTree = "<group>"; tabWidth = 2; };
+		F181D4B9A5CE80C2DD789763C64A4033 /* CiaoTransitions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CiaoTransitions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4ADF16602A213C04846289652408A2B /* CiaoAppStoreConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CiaoAppStoreConfigurator.swift; sourceTree = "<group>"; };
+		F4DF768D286868FB451E05E8A018E608 /* CiaoTransitions-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CiaoTransitions-Info.plist"; sourceTree = "<group>"; };
+		F87B3ADBBD148C2DF9B5856A05696FB0 /* Pods-CiaoTransitions_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CiaoTransitions_Example-dummy.m"; sourceTree = "<group>"; };
+		FE1C9E822469C0E906EFE3ED5932DF6A /* Animator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5268B2499CF0A34CB74519B7A9596C02 /* Frameworks */ = {
+		727761C465F85891BDB8D1A8CBA57713 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D5933FE346397E470AAB6BEBE2851AC /* Foundation.framework in Frameworks */,
+				2C2514BB549C7CD415480820B6BD2ADE /* Foundation.framework in Frameworks */,
+				783356195F9FBF4E7947AA33272FC2C2 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8B71ECB22679DDD0B20A078B5065F69F /* Frameworks */ = {
+		C589F835713645354C95BFD6E36E3EC7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F7A963FCFA9489A43636E5A07CB5EEF /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F1C3036A281B845DF8C82482BEBCE09C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F36846526C95FA2E398AF9221750006F /* Foundation.framework in Frameworks */,
+				F605E4B683EFA3A5423B6AB8F8104AD2 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2BF1C3F58778D39F64EF874DFFE394CE /* Support Files */ = {
+		08730C3DEF3F1D2EF442E883496AD275 /* Animator */ = {
 			isa = PBXGroup;
 			children = (
-				EDD17060623C34FFEF6E7B4A44601EF8 /* CiaoTransitions.modulemap */,
-				EB52807F48DB336CD92BE3740C95A4D0 /* CiaoTransitions.xcconfig */,
-				A298BC02AC4E20407CC0E915DA0F2AFF /* CiaoTransitions-dummy.m */,
-				D1E817028D1DBF80E857D740D2E27CD4 /* CiaoTransitions-prefix.pch */,
-				FE6063D8570EA8F5600B0871B4759EA0 /* CiaoTransitions-umbrella.h */,
-				F3E8B327B1E81CB5A047B593385C9966 /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/CiaoTransitions";
-			sourceTree = "<group>";
-		};
-		4D9D5DC0A0D9D41466EFC42A6B43D8CB /* Pods-CiaoTransitions_Example */ = {
-			isa = PBXGroup;
-			children = (
-				D72F7A39170DE842A7AD17753D6DFA3E /* Info.plist */,
-				D6C46F25C8B713B8204B76306BCD4A9E /* Pods-CiaoTransitions_Example.modulemap */,
-				FE459F6CE8856763B3CC2C46EFD5DEC5 /* Pods-CiaoTransitions_Example-acknowledgements.markdown */,
-				1D6ACFA48FB6E5CB5D525F0AC2CCCB79 /* Pods-CiaoTransitions_Example-acknowledgements.plist */,
-				013114A97E5CB5B1D9D0640EA6E690EC /* Pods-CiaoTransitions_Example-dummy.m */,
-				392DF46ABD3DC79122955BCBB54A2689 /* Pods-CiaoTransitions_Example-frameworks.sh */,
-				46962C5DB7FDC891DF13F421AD7FC052 /* Pods-CiaoTransitions_Example-resources.sh */,
-				B390C8B30717FD7C50F9883DC2BF42E2 /* Pods-CiaoTransitions_Example-umbrella.h */,
-				167DE7E663F326E4175B2C5C1432B643 /* Pods-CiaoTransitions_Example.debug.xcconfig */,
-				48F8BFADB83868C72D65B64C73959DD8 /* Pods-CiaoTransitions_Example.release.xcconfig */,
-			);
-			name = "Pods-CiaoTransitions_Example";
-			path = "Target Support Files/Pods-CiaoTransitions_Example";
-			sourceTree = "<group>";
-		};
-		5E0D919E635D23B70123790B8308F8EF /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		638E43E1E6D6F5F5D4B7456BC1258ADB /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				4D9D5DC0A0D9D41466EFC42A6B43D8CB /* Pods-CiaoTransitions_Example */,
-				8982F13BB144361586702B109205B9AA /* Pods-CiaoTransitions_Tests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		783D49E05C7CD84B339F5BE1FF5DE688 /* CiaoTransitions */ = {
-			isa = PBXGroup;
-			children = (
-				E37BB58621531CF3006450D2 /* Globals.swift */,
-				E3B7C58D2154F13500B53272 /* CiaoTransition.swift */,
-				E3B7C5A92157069400B53272 /* CiaoTransitionStyle.swift */,
-				E3B7C5AE2157069400B53272 /* Configurator */,
-				E3B7C5B22157069400B53272 /* Animator */,
-				E3B7C5AA2157069400B53272 /* Interactor */,
-				E37BB58221531CF3006450D2 /* Extensions */,
-				E37BB58921531CF4006450D2 /* ModalAppStoreTransition */,
-				E37BB57D21531CF3006450D2 /* Views */,
-				FBD68AFB3E284D591DE498827EDEF5A5 /* Pod */,
-				2BF1C3F58778D39F64EF874DFFE394CE /* Support Files */,
-			);
-			name = CiaoTransitions;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		7DB346D0F39D3F0E887471402A8071AB = {
-			isa = PBXGroup;
-			children = (
-				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				DCD352B0DAB1E255948F9536AF0F3D82 /* Development Pods */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				AC0F989AD677BC531DF0987A1ACDBBBB /* Products */,
-				638E43E1E6D6F5F5D4B7456BC1258ADB /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		8982F13BB144361586702B109205B9AA /* Pods-CiaoTransitions_Tests */ = {
-			isa = PBXGroup;
-			children = (
-				010BD5308A902CBC83BA42B4F034A2CE /* Info.plist */,
-				83FB697E2205B3C4779A1AF605160D6D /* Pods-CiaoTransitions_Tests.modulemap */,
-				73BD39603EF48252973BB5B6F40E3D2A /* Pods-CiaoTransitions_Tests-acknowledgements.markdown */,
-				95D870EE4F939B161DB880D7B012F58E /* Pods-CiaoTransitions_Tests-acknowledgements.plist */,
-				4E2FFBC44829E42A49B06DBAE8E35122 /* Pods-CiaoTransitions_Tests-dummy.m */,
-				1F44935ABAA5233617611A887D55FA05 /* Pods-CiaoTransitions_Tests-frameworks.sh */,
-				670658BD4F604E32EF5488D0EBA88484 /* Pods-CiaoTransitions_Tests-resources.sh */,
-				0F8F26183B54EB0F2D7DDD508972E0BE /* Pods-CiaoTransitions_Tests-umbrella.h */,
-				20EC20139723C8BFB49F52417693657E /* Pods-CiaoTransitions_Tests.debug.xcconfig */,
-				456F760CF075DF3FB9C13B01F2CC606D /* Pods-CiaoTransitions_Tests.release.xcconfig */,
-			);
-			name = "Pods-CiaoTransitions_Tests";
-			path = "Target Support Files/Pods-CiaoTransitions_Tests";
-			sourceTree = "<group>";
-		};
-		AC0F989AD677BC531DF0987A1ACDBBBB /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				CA3BCFCC03FAA6F11D019777FC7CDC4B /* CiaoTransitions.framework */,
-				2779BAB75200E9ED6D28F14B054AA7B4 /* Pods_CiaoTransitions_Example.framework */,
-				93B00B8B535542A854DDA1B61E8364C0 /* Pods_CiaoTransitions_Tests.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5E0D919E635D23B70123790B8308F8EF /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		DCD352B0DAB1E255948F9536AF0F3D82 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				783D49E05C7CD84B339F5BE1FF5DE688 /* CiaoTransitions */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		E37BB57D21531CF3006450D2 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				E37BB57F21531CF3006450D2 /* CiaoCardCollectionViewCell.swift */,
-			);
-			name = Views;
-			path = CiaoTransitions/Views;
-			sourceTree = "<group>";
-		};
-		E37BB58221531CF3006450D2 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				E37BB58321531CF3006450D2 /* UIView+Tools.swift */,
-				E37BB58421531CF3006450D2 /* UIImageView+Copy.swift */,
-			);
-			name = Extensions;
-			path = CiaoTransitions/Extensions;
-			sourceTree = "<group>";
-		};
-		E37BB58921531CF4006450D2 /* ModalAppStoreTransition */ = {
-			isa = PBXGroup;
-			children = (
-				E37BB59121531CF4006450D2 /* CiaoModalPresentationController.swift */,
-				E37BB58B21531CF4006450D2 /* PresentAppStoreAnimator.swift */,
-				E37BB58C21531CF4006450D2 /* PresentAppStoreTransitionDriver.swift */,
-				E37BB58F21531CF4006450D2 /* DismissAppStoreAnimator.swift */,
-			);
-			name = ModalAppStoreTransition;
-			path = CiaoTransitions/ModalAppStoreTransition;
-			sourceTree = "<group>";
-		};
-		E3B7C5AA2157069400B53272 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				E3B7C5AB2157069400B53272 /* SpecialInteractor.swift */,
-				E3B7C5AC2157069400B53272 /* BasicInteractor.swift */,
-				E3B7C5AD2157069400B53272 /* Interactor.swift */,
-			);
-			name = Interactor;
-			path = CiaoTransitions/Interactor;
-			sourceTree = "<group>";
-		};
-		E3B7C5AE2157069400B53272 /* Configurator */ = {
-			isa = PBXGroup;
-			children = (
-				E3B7C5AF2157069400B53272 /* CiaoConfigurator.swift */,
-				E3B7C5B02157069400B53272 /* CiaoScaleConfigurator.swift */,
-				E3B7C5B12157069400B53272 /* CiaoAppStoreConfigurator.swift */,
-			);
-			name = Configurator;
-			path = CiaoTransitions/Configurator;
-			sourceTree = "<group>";
-		};
-		E3B7C5B22157069400B53272 /* Animator */ = {
-			isa = PBXGroup;
-			children = (
-				E3B7C5B32157069400B53272 /* BasicScaleAnimator.swift */,
-				E3B7C5B42157069400B53272 /* BasicAnimator.swift */,
-				E3B7C5B52157069400B53272 /* Animator.swift */,
-				E3B7C5B62157069400B53272 /* BasicLateralAnimator.swift */,
-				E3B7C5B72157069400B53272 /* BasicVerticalAnimator.swift */,
+				FE1C9E822469C0E906EFE3ED5932DF6A /* Animator.swift */,
+				17599175E792C5B1549988835FAA7626 /* BasicAnimator.swift */,
+				297DC2B3544F0B8591540DB5CCAC56E9 /* BasicLateralAnimator.swift */,
+				448849B7CE3BFBDD1A201B513A4D821E /* BasicScaleAnimator.swift */,
+				83E40C3A4452AD257447EDB791178A52 /* BasicVerticalAnimator.swift */,
 			);
 			name = Animator;
 			path = CiaoTransitions/Animator;
 			sourceTree = "<group>";
 		};
-		FBD68AFB3E284D591DE498827EDEF5A5 /* Pod */ = {
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A7739890A4511C4F731486CDC23EA35C /* CiaoTransitions.podspec */,
-				06EB2DCE9D66A3D8ABD3686B9C7C44C2 /* LICENSE */,
-				F7A29D3F66A6BD4FA3869D01847DB0F6 /* README.md */,
+				E169A450ED27AC725DF52953F66D11E0 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		25E14E8891BDD213183C07743A718512 /* CiaoTransitions */ = {
+			isa = PBXGroup;
+			children = (
+				A1F94E9DA801DCB8997FEA64C21C1596 /* CiaoTransition.swift */,
+				4705A2BF9EEA019A76848BD7F1E16B82 /* CiaoTransitionStyle.swift */,
+				68CF0B4DEDCA7A67877EFCC02DCE1C27 /* Globals.swift */,
+				08730C3DEF3F1D2EF442E883496AD275 /* Animator */,
+				E17B815153EE5570C3C1E1AEAAF31399 /* Configurator */,
+				511C1E380D9C7938C63FD25A30A77E39 /* Extensions */,
+				955DFAEACCBEA960B49B879BD23F4E66 /* Interactor */,
+				61EC748E165028CF8A89498B2BAF95AB /* ModalAppStoreTransition */,
+				5EABF9CD4124730BE56145447BD08017 /* Pod */,
+				6B68816948F9A98D0E9E19926C1C52C8 /* Support Files */,
+				9787ACC4F3592D274A0B920AE30CA4FB /* Views */,
+			);
+			name = CiaoTransitions;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		511C1E380D9C7938C63FD25A30A77E39 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0CA61CD6C20E3336F8B6F85D09173A8A /* UIImageView+Copy.swift */,
+				3D3CECC3110533BE29BCB900F56EA429 /* UIView+Tools.swift */,
+			);
+			name = Extensions;
+			path = CiaoTransitions/Extensions;
+			sourceTree = "<group>";
+		};
+		5EABF9CD4124730BE56145447BD08017 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				EE79E2CD4A9EABE8BC39C178FEA5489B /* CiaoTransitions.podspec */,
+				7421157F4A2FEF51BA10AEB44D76ACDA /* LICENSE */,
+				D8D26C1B7B07B31BB3F6468397ED3F84 /* README.md */,
 			);
 			name = Pod;
+			sourceTree = "<group>";
+		};
+		61EC748E165028CF8A89498B2BAF95AB /* ModalAppStoreTransition */ = {
+			isa = PBXGroup;
+			children = (
+				178668F7CFF68C76C65358A6C2FADAD1 /* CiaoModalPresentationController.swift */,
+				19412A8193F8CE27CE45CE5A0D41D036 /* DismissAppStoreAnimator.swift */,
+				6A16CEB1DECB7B1959E8B5B240A828F9 /* PresentAppStoreAnimator.swift */,
+				B0021C920DDA28251474BDE54E789697 /* PresentAppStoreTransitionDriver.swift */,
+			);
+			name = ModalAppStoreTransition;
+			path = CiaoTransitions/ModalAppStoreTransition;
+			sourceTree = "<group>";
+		};
+		6B68816948F9A98D0E9E19926C1C52C8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B4243FC4CA94D5A3E7DC1E05FCE73254 /* CiaoTransitions.modulemap */,
+				737A7668CD6E64E2B4A87535D56DE71E /* CiaoTransitions.xcconfig */,
+				2FCF1D2EED6FE70835B735CA3499C138 /* CiaoTransitions-dummy.m */,
+				F4DF768D286868FB451E05E8A018E608 /* CiaoTransitions-Info.plist */,
+				7494D378399A5D8B8C7E4AB3BEE4979A /* CiaoTransitions-prefix.pch */,
+				CB62195C4BEDECC61E62006E410A0FD9 /* CiaoTransitions-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/CiaoTransitions";
+			sourceTree = "<group>";
+		};
+		74223CBD31CFAA0F5B12B2DE2FC2D4E1 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				25E14E8891BDD213183C07743A718512 /* CiaoTransitions */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		820FAB34BF87C292FF80B0EC46CB5541 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F181D4B9A5CE80C2DD789763C64A4033 /* CiaoTransitions.framework */,
+				6DA9940C9FD6E41A8FAC6EFE3B0D49AC /* Pods_CiaoTransitions_Example.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		955DFAEACCBEA960B49B879BD23F4E66 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				1EE72874BEF0BBE59F2E1223F736E783 /* BasicInteractor.swift */,
+				B0609366C64B6D8A553822261075D302 /* Interactor.swift */,
+				B71AA24CAD084AEE48153EF259BDFB4B /* SpecialInteractor.swift */,
+			);
+			name = Interactor;
+			path = CiaoTransitions/Interactor;
+			sourceTree = "<group>";
+		};
+		9787ACC4F3592D274A0B920AE30CA4FB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				842271C24736CCE96C95CBEBAF6B3380 /* CiaoCardCollectionViewCell.swift */,
+			);
+			name = Views;
+			path = CiaoTransitions/Views;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				74223CBD31CFAA0F5B12B2DE2FC2D4E1 /* Development Pods */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				820FAB34BF87C292FF80B0EC46CB5541 /* Products */,
+				FBA290E381EE49F772B92803477BC44C /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		E169A450ED27AC725DF52953F66D11E0 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */,
+				ECF2A2B0720AE923C22BED3192888BE0 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		E17B815153EE5570C3C1E1AEAAF31399 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				F4ADF16602A213C04846289652408A2B /* CiaoAppStoreConfigurator.swift */,
+				E99A6A18DDDFF0BA49F90A015CF6CBC7 /* CiaoConfigurator.swift */,
+				B0A1B1ADE9A413F3A08D73F29E7C584D /* CiaoScaleConfigurator.swift */,
+			);
+			name = Configurator;
+			path = CiaoTransitions/Configurator;
+			sourceTree = "<group>";
+		};
+		E3B2D3441F553C7E2553D9D790D8FD04 /* Pods-CiaoTransitions_Example */ = {
+			isa = PBXGroup;
+			children = (
+				CB91FCBA6EED9A28F0123D02991CB828 /* Pods-CiaoTransitions_Example.modulemap */,
+				23DB55CF6A86B1E0150D409DA08D52F3 /* Pods-CiaoTransitions_Example-acknowledgements.markdown */,
+				7848D66B674F515AD27AB980B89EA6A2 /* Pods-CiaoTransitions_Example-acknowledgements.plist */,
+				F87B3ADBBD148C2DF9B5856A05696FB0 /* Pods-CiaoTransitions_Example-dummy.m */,
+				AFD49DB2E53384790A2B452D3043080F /* Pods-CiaoTransitions_Example-frameworks.sh */,
+				8AEE63F8319BBAE2E4572C2123112F44 /* Pods-CiaoTransitions_Example-Info.plist */,
+				C345EBC015DFC51E5625588DDBAAEA9C /* Pods-CiaoTransitions_Example-umbrella.h */,
+				BC1CD5070B368A2331E04CD609A72230 /* Pods-CiaoTransitions_Example.debug.xcconfig */,
+				E544FBA2D1D9FAC74534C3FD5D611206 /* Pods-CiaoTransitions_Example.release.xcconfig */,
+			);
+			name = "Pods-CiaoTransitions_Example";
+			path = "Target Support Files/Pods-CiaoTransitions_Example";
+			sourceTree = "<group>";
+		};
+		FBA290E381EE49F772B92803477BC44C /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E3B2D3441F553C7E2553D9D790D8FD04 /* Pods-CiaoTransitions_Example */,
+			);
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		670FB733F8CA336A1EA17ACE7AC2405F /* Headers */ = {
+		6854940E1F75192A9B21F560366695A5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5ACE7A0DD4D638CA82CA0F0AD03A859 /* Pods-CiaoTransitions_Example-umbrella.h in Headers */,
+				086224437466801E36229526E0CEA31C /* CiaoTransitions-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7751CFAE5DE53C9686049EC5712C09EC /* Headers */ = {
+		80946F228FE09DF199640064E3B1822C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB1DEBAE8480BECFE41F7267E62880D4 /* CiaoTransitions-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E30D6CB0553155B34DD369218F91B9B2 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9DB8DF5CA43277D67EC8EE5614882D50 /* Pods-CiaoTransitions_Tests-umbrella.h in Headers */,
+				1BF3489E5FD239231A150682F36EEC75 /* Pods-CiaoTransitions_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		064B664BE9138C73CEA29C5CCB1141DB /* CiaoTransitions */ = {
+		44D33A34608EEEEF66031A371015EE7A /* CiaoTransitions */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7801C01EB80BD838A5B175468DD65E1B /* Build configuration list for PBXNativeTarget "CiaoTransitions" */;
+			buildConfigurationList = 6C9B967E4C5D423EB978A88AFF141980 /* Build configuration list for PBXNativeTarget "CiaoTransitions" */;
 			buildPhases = (
-				7751CFAE5DE53C9686049EC5712C09EC /* Headers */,
-				F08B0F21C551EA2C0B66E55AFB391AC2 /* Sources */,
-				8B71ECB22679DDD0B20A078B5065F69F /* Frameworks */,
-				C4904A8294D1898056A4B26E49A5C3C9 /* Resources */,
+				6854940E1F75192A9B21F560366695A5 /* Headers */,
+				6FC818254F7EC1794CD66500CF462570 /* Sources */,
+				727761C465F85891BDB8D1A8CBA57713 /* Frameworks */,
+				764624AE4B50D15D820E6C354CD0D7D8 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -386,96 +331,65 @@
 			);
 			name = CiaoTransitions;
 			productName = CiaoTransitions;
-			productReference = CA3BCFCC03FAA6F11D019777FC7CDC4B /* CiaoTransitions.framework */;
+			productReference = F181D4B9A5CE80C2DD789763C64A4033 /* CiaoTransitions.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		5B55CAFA23933879757AB54F1ED3E756 /* Pods-CiaoTransitions_Tests */ = {
+		FA775C8BBFB996C807A7B4EF719DFDF8 /* Pods-CiaoTransitions_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0DB8085D48254881EAE35145DFD21A3E /* Build configuration list for PBXNativeTarget "Pods-CiaoTransitions_Tests" */;
+			buildConfigurationList = 35C4B37E827BA48A9FFB613AF27EDCD4 /* Build configuration list for PBXNativeTarget "Pods-CiaoTransitions_Example" */;
 			buildPhases = (
-				E30D6CB0553155B34DD369218F91B9B2 /* Headers */,
-				A4F1EAFE6CA46707486953AC6BE27AF8 /* Sources */,
-				5268B2499CF0A34CB74519B7A9596C02 /* Frameworks */,
-				B6588986D4CD9951BB3C1DE9CE923DA4 /* Resources */,
+				80946F228FE09DF199640064E3B1822C /* Headers */,
+				A57135C1AF717BAF7B08BE45A59E4569 /* Sources */,
+				C589F835713645354C95BFD6E36E3EC7 /* Frameworks */,
+				BC3B5318207342311CB988E8C3A16E6F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3EEB330B3B191476BB41338D9BA279C1 /* PBXTargetDependency */,
-			);
-			name = "Pods-CiaoTransitions_Tests";
-			productName = "Pods-CiaoTransitions_Tests";
-			productReference = 93B00B8B535542A854DDA1B61E8364C0 /* Pods_CiaoTransitions_Tests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		94C03205E8B797D3012A5EFE81201039 /* Pods-CiaoTransitions_Example */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 91C772C9EDC4A7D781D91B737E0DF2C9 /* Build configuration list for PBXNativeTarget "Pods-CiaoTransitions_Example" */;
-			buildPhases = (
-				670FB733F8CA336A1EA17ACE7AC2405F /* Headers */,
-				310269E46A1D7AFAB56615BD0D32E2A9 /* Sources */,
-				F1C3036A281B845DF8C82482BEBCE09C /* Frameworks */,
-				5E9FEB90D975BC8F1AD68203176AB845 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C1DFAE7EE2666D719C4ADFF41ACF1AA8 /* PBXTargetDependency */,
+				EC847EFB5553939FF82237CFB9BA9C3B /* PBXTargetDependency */,
 			);
 			name = "Pods-CiaoTransitions_Example";
 			productName = "Pods-CiaoTransitions_Example";
-			productReference = 2779BAB75200E9ED6D28F14B054AA7B4 /* Pods_CiaoTransitions_Example.framework */;
+			productReference = 6DA9940C9FD6E41A8FAC6EFE3B0D49AC /* Pods_CiaoTransitions_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
-				TargetAttributes = {
-					064B664BE9138C73CEA29C5CCB1141DB = {
-						LastSwiftMigration = 0940;
-					};
-				};
 			};
-			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
-			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = AC0F989AD677BC531DF0987A1ACDBBBB /* Products */;
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 820FAB34BF87C292FF80B0EC46CB5541 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				064B664BE9138C73CEA29C5CCB1141DB /* CiaoTransitions */,
-				94C03205E8B797D3012A5EFE81201039 /* Pods-CiaoTransitions_Example */,
-				5B55CAFA23933879757AB54F1ED3E756 /* Pods-CiaoTransitions_Tests */,
+				44D33A34608EEEEF66031A371015EE7A /* CiaoTransitions */,
+				FA775C8BBFB996C807A7B4EF719DFDF8 /* Pods-CiaoTransitions_Example */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		5E9FEB90D975BC8F1AD68203176AB845 /* Resources */ = {
+		764624AE4B50D15D820E6C354CD0D7D8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B6588986D4CD9951BB3C1DE9CE923DA4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C4904A8294D1898056A4B26E49A5C3C9 /* Resources */ = {
+		BC3B5318207342311CB988E8C3A16E6F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -485,74 +399,61 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		310269E46A1D7AFAB56615BD0D32E2A9 /* Sources */ = {
+		6FC818254F7EC1794CD66500CF462570 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82B706663D480669D6CEF647DF550A9C /* Pods-CiaoTransitions_Example-dummy.m in Sources */,
+				2726A899891E3AFA07D88493675F3EE1 /* Animator.swift in Sources */,
+				5D28F6F04DFE27D794071DE92E7183D8 /* BasicAnimator.swift in Sources */,
+				18C94C136E0071BCDBB09FCECA6CB48D /* BasicInteractor.swift in Sources */,
+				C8829BD4920D4166E2F8761FB1E96E3E /* BasicLateralAnimator.swift in Sources */,
+				B936E5CD22EE60C9FBA395A54C652ED7 /* BasicScaleAnimator.swift in Sources */,
+				252F58293564574989D7FDA95981767F /* BasicVerticalAnimator.swift in Sources */,
+				8E8F8B67E3B1AB065C53AB4AA60FB52E /* CiaoAppStoreConfigurator.swift in Sources */,
+				04BA99CEC3C238615A1571843581D1A5 /* CiaoCardCollectionViewCell.swift in Sources */,
+				1A5A4192218B5D199F5821708F033904 /* CiaoConfigurator.swift in Sources */,
+				8FAE3C0A88861F257088AEBDD5C0948E /* CiaoModalPresentationController.swift in Sources */,
+				BA6FEB1209086BFA529420F02647B3C1 /* CiaoScaleConfigurator.swift in Sources */,
+				3F2FE249E90D5D99CEEADF037729D8C7 /* CiaoTransition.swift in Sources */,
+				1EDA55B063B42568327E762D76F2396B /* CiaoTransitions-dummy.m in Sources */,
+				EFD78532D466614D4C76B1480AC1FA5F /* CiaoTransitionStyle.swift in Sources */,
+				386A294DC25B2DFDA578710C20DF7A8E /* DismissAppStoreAnimator.swift in Sources */,
+				31BB93FD99AD7E8D5D2E594EEA4D46A0 /* Globals.swift in Sources */,
+				08B5BE15E179C39923E3F0011C3154BE /* Interactor.swift in Sources */,
+				170B9DA212A95B423624AB0E048F1BE0 /* PresentAppStoreAnimator.swift in Sources */,
+				461ADCD7FDD7F5A6BFD637B61F9BC8A2 /* PresentAppStoreTransitionDriver.swift in Sources */,
+				79D49A2960CB3EF85964EAD6CE155231 /* SpecialInteractor.swift in Sources */,
+				B89D56B551FBD6CDB7AF9AFA3C4BB0CC /* UIImageView+Copy.swift in Sources */,
+				25AFDCA9E601AC1A8FC85E32441D29F2 /* UIView+Tools.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A4F1EAFE6CA46707486953AC6BE27AF8 /* Sources */ = {
+		A57135C1AF717BAF7B08BE45A59E4569 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				725E6F0F8E42FF41EDBE0A69BDDDB2B5 /* Pods-CiaoTransitions_Tests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F08B0F21C551EA2C0B66E55AFB391AC2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E3B7C5C12157069500B53272 /* Animator.swift in Sources */,
-				E37BB59E21531CF5006450D2 /* CiaoCardCollectionViewCell.swift in Sources */,
-				E37BB5A121531CF5006450D2 /* UIView+Tools.swift in Sources */,
-				E3B7C5BA2157069500B53272 /* BasicInteractor.swift in Sources */,
-				E37BB5AC21531CF5006450D2 /* CiaoModalPresentationController.swift in Sources */,
-				E3B7C5C02157069500B53272 /* BasicAnimator.swift in Sources */,
-				078ED389B8BA9526BD00C057CCF218D5 /* CiaoTransitions-dummy.m in Sources */,
-				E3B7C5B82157069500B53272 /* CiaoTransitionStyle.swift in Sources */,
-				E3B7C5C22157069500B53272 /* BasicLateralAnimator.swift in Sources */,
-				E3B7C5C32157069500B53272 /* BasicVerticalAnimator.swift in Sources */,
-				E3B7C58E2154F13500B53272 /* CiaoTransition.swift in Sources */,
-				E37BB5A821531CF5006450D2 /* PresentAppStoreTransitionDriver.swift in Sources */,
-				E37BB5A421531CF5006450D2 /* Globals.swift in Sources */,
-				E37BB5A721531CF5006450D2 /* PresentAppStoreAnimator.swift in Sources */,
-				E3B7C5BF2157069500B53272 /* BasicScaleAnimator.swift in Sources */,
-				E37BB5A221531CF5006450D2 /* UIImageView+Copy.swift in Sources */,
-				E3B7C5B92157069500B53272 /* SpecialInteractor.swift in Sources */,
-				E3B7C5BB2157069500B53272 /* Interactor.swift in Sources */,
-				E3B7C5BE2157069500B53272 /* CiaoAppStoreConfigurator.swift in Sources */,
-				E3B7C5BD2157069500B53272 /* CiaoScaleConfigurator.swift in Sources */,
-				E37BB5AA21531CF5006450D2 /* DismissAppStoreAnimator.swift in Sources */,
-				E3B7C5BC2157069500B53272 /* CiaoConfigurator.swift in Sources */,
+				A24898A81C8B57355062C08CE9D73EFF /* Pods-CiaoTransitions_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3EEB330B3B191476BB41338D9BA279C1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-CiaoTransitions_Example";
-			target = 94C03205E8B797D3012A5EFE81201039 /* Pods-CiaoTransitions_Example */;
-			targetProxy = 685983C4886310A5D8F66AC8F9AC2DCF /* PBXContainerItemProxy */;
-		};
-		C1DFAE7EE2666D719C4ADFF41ACF1AA8 /* PBXTargetDependency */ = {
+		EC847EFB5553939FF82237CFB9BA9C3B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CiaoTransitions;
-			target = 064B664BE9138C73CEA29C5CCB1141DB /* CiaoTransitions */;
-			targetProxy = 899DB178CC1BA6DEE47D1B40CB9BA5BF /* PBXContainerItemProxy */;
+			target = 44D33A34608EEEEF66031A371015EE7A /* CiaoTransitions */;
+			targetProxy = 505736A09FC9EB5D7F4F0D9C57FD108A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		507A4E2F9C633F49860239E608B9398D /* Release */ = {
+		278DBFCE95C652478452EC614A1B2C4D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 48F8BFADB83868C72D65B64C73959DD8 /* Pods-CiaoTransitions_Example.release.xcconfig */;
+			baseConfigurationReference = 737A7668CD6E64E2B4A87535D56DE71E /* CiaoTransitions.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -562,20 +463,18 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-CiaoTransitions_Example/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/CiaoTransitions/CiaoTransitions-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CiaoTransitions/CiaoTransitions-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-CiaoTransitions_Example/Pods-CiaoTransitions_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/CiaoTransitions/CiaoTransitions.modulemap";
+				PRODUCT_MODULE_NAME = CiaoTransitions;
+				PRODUCT_NAME = CiaoTransitions;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -583,42 +482,7 @@
 			};
 			name = Release;
 		};
-		52B742F815B5D134E88C4F0BBC7A669B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 167DE7E663F326E4175B2C5C1432B643 /* Pods-CiaoTransitions_Example.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-CiaoTransitions_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-CiaoTransitions_Example/Pods-CiaoTransitions_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		56A05ADD3BABDA1B56D1F979845809B1 /* Release */ = {
+		4CE281642D6EE9FAB113046B4B6328A0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -650,8 +514,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -673,15 +535,19 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
 		};
-		656F5415341191CAEF60FD083785A74C /* Debug */ = {
+		610DBA8D2CF8EFAF9F1B0FA742C39616 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EB52807F48DB336CD92BE3740C95A4D0 /* CiaoTransitions.xcconfig */;
+			baseConfigurationReference = BC1CD5070B368A2331E04CD609A72230 /* Pods-CiaoTransitions_Example.debug.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -691,45 +557,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/CiaoTransitions/CiaoTransitions-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CiaoTransitions/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-CiaoTransitions_Example/Pods-CiaoTransitions_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/CiaoTransitions/CiaoTransitions.modulemap";
-				PRODUCT_MODULE_NAME = CiaoTransitions;
-				PRODUCT_NAME = CiaoTransitions;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		8114548E6BA05CA4BC2EFADE4FD454D9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 456F760CF075DF3FB9C13B01F2CC606D /* Pods-CiaoTransitions_Tests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-CiaoTransitions_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-CiaoTransitions_Tests/Pods-CiaoTransitions_Tests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-CiaoTransitions_Example/Pods-CiaoTransitions_Example.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -738,13 +571,12 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		BEFDB93BF207328A04F1220475D02C3B /* Debug */ = {
+		6DFA1578582149B7E24AD55CBA30F07A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -776,8 +608,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -804,15 +634,54 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		E19E55C34723F053A6FCC8A0F362DCEC /* Release */ = {
+		7ECBEECA78091DC51C9035CFCB35C1F6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EB52807F48DB336CD92BE3740C95A4D0 /* CiaoTransitions.xcconfig */;
+			baseConfigurationReference = E544FBA2D1D9FAC74534C3FD5D611206 /* Pods-CiaoTransitions_Example.release.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CiaoTransitions_Example/Pods-CiaoTransitions_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CiaoTransitions_Example/Pods-CiaoTransitions_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		ECB5E408A163C38460CCE6FA6220ED25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 737A7668CD6E64E2B4A87535D56DE71E /* CiaoTransitions.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -823,9 +692,9 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_PREFIX_HEADER = "Target Support Files/CiaoTransitions/CiaoTransitions-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CiaoTransitions/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/CiaoTransitions/CiaoTransitions-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/CiaoTransitions/CiaoTransitions.modulemap";
 				PRODUCT_MODULE_NAME = CiaoTransitions;
@@ -833,42 +702,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		ED94B5AED05EEAE5748359B66E006BEA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 20EC20139723C8BFB49F52417693657E /* Pods-CiaoTransitions_Tests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-CiaoTransitions_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-CiaoTransitions_Tests/Pods-CiaoTransitions_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -878,43 +712,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0DB8085D48254881EAE35145DFD21A3E /* Build configuration list for PBXNativeTarget "Pods-CiaoTransitions_Tests" */ = {
+		35C4B37E827BA48A9FFB613AF27EDCD4 /* Build configuration list for PBXNativeTarget "Pods-CiaoTransitions_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ED94B5AED05EEAE5748359B66E006BEA /* Debug */,
-				8114548E6BA05CA4BC2EFADE4FD454D9 /* Release */,
+				610DBA8D2CF8EFAF9F1B0FA742C39616 /* Debug */,
+				7ECBEECA78091DC51C9035CFCB35C1F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BEFDB93BF207328A04F1220475D02C3B /* Debug */,
-				56A05ADD3BABDA1B56D1F979845809B1 /* Release */,
+				6DFA1578582149B7E24AD55CBA30F07A /* Debug */,
+				4CE281642D6EE9FAB113046B4B6328A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7801C01EB80BD838A5B175468DD65E1B /* Build configuration list for PBXNativeTarget "CiaoTransitions" */ = {
+		6C9B967E4C5D423EB978A88AFF141980 /* Build configuration list for PBXNativeTarget "CiaoTransitions" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				656F5415341191CAEF60FD083785A74C /* Debug */,
-				E19E55C34723F053A6FCC8A0F362DCEC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		91C772C9EDC4A7D781D91B737E0DF2C9 /* Build configuration list for PBXNativeTarget "Pods-CiaoTransitions_Example" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				52B742F815B5D134E88C4F0BBC7A669B /* Debug */,
-				507A4E2F9C633F49860239E608B9398D /* Release */,
+				ECB5E408A163C38460CCE6FA6220ED25 /* Debug */,
+				278DBFCE95C652478452EC614A1B2C4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 }

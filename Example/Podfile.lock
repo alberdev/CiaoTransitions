@@ -1,5 +1,5 @@
 PODS:
-  - CiaoTransitions (0.1.0)
+  - CiaoTransitions (1.1.0)
 
 DEPENDENCIES:
   - CiaoTransitions (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CiaoTransitions: b69244ba645d5f373398a9ec3e73d358fa225caa
+  CiaoTransitions: 3a58a23405e79a499b52938fbeccebb98cb134a9
 
-PODFILE CHECKSUM: 746a5f8e03b2fc1d4843e11113f2bbba526b9fd0
+PODFILE CHECKSUM: 5ec6949f65159c4e8e281a4ecfb5c0525c94b338
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.7.0.beta.3

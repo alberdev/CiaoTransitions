@@ -3,7 +3,7 @@ This application makes use of the following third party libraries:
 
 ## CiaoTransitions
 
-Copyright (c) 2018 alberdev <albertokr@gmail.com>
+Copyright (c) 2018 Alberto Aznar <albertokr@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

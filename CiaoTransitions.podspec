@@ -7,7 +7,7 @@ s.ios.deployment_target = '11'
 s.name = "CiaoTransitions"
 s.summary = "With Ciao you can make fancy custom transitions. Use it in your iOS projects to make push and modal transitions between view controllers"
 s.requires_arc = true
-s.version = "1.0.0"
+s.version = "1.1.0"
 
 # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
@@ -37,6 +37,6 @@ s.source_files = "CiaoTransitions/**/*.{swift}"
 
 # ――― Swift Version ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-s.swift_version = "4.2"
+s.swift_version = "5.0"
 
 end

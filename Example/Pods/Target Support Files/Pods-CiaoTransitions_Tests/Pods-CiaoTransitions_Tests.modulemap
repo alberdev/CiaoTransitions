@@ -1,6 +1,0 @@
-framework module Pods_CiaoTransitions_Tests {
-  umbrella header "Pods-CiaoTransitions_Tests-umbrella.h"
-
-  export *
-  module * { export * }
-}

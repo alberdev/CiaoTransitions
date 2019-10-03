@@ -86,6 +86,7 @@ extension ItemsRouting: ItemsRoutingInterface {
 //            viewController?.navigationController?.delegate = transition
 //            viewController?.navigationController?.pushViewController(presentViewController!, animated: true)
 //        case .modal:
+        presentViewController?.modalPresentationStyle = .fullScreen
             viewController?.present(presentViewController!, animated: true, completion: nil)
 //        }
         

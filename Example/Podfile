@@ -2,10 +2,5 @@ use_frameworks!
 
 target 'CiaoTransitions_Example' do
   pod 'CiaoTransitions', :path => '../'
-
-  target 'CiaoTransitions_Tests' do
-    inherit! :search_paths
-
     
-  end
 end
