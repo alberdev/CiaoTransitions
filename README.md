@@ -1,17 +1,58 @@
-![CiaoTransitions logo](https://raw.githubusercontent.com/alberdev/CiaoTransitions/master/Images/header_Ciao.png)
+<p align="center">
+   <img width="500" src="https://raw.githubusercontent.com/alberdev/CiaoTransitions/master/Images/header_CiaoTransitions.png" alt="CiaoTransitions  Logo">
+</p>
+
+<p align="center">
+   <a href="https://cocoapods.org/pods/CiaoTransitions">
+      <img src="https://img.shields.io/cocoapods/v/CiaoTransitions.svg?style=flat&colorB=2EC9DD" alt="Version">
+   </a>
+   <!--
+   <a href="https://github.com/Carthage/Carthage">
+      <img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage Compatible">
+   </a>
+   -->
+   <a href="https://cocoapods.org/pods/CiaoTransitions">
+      <img src="https://img.shields.io/cocoapods/l/CiaoTransitions.svg?style=flat)" alt="License">
+   </a>
+   <a href="https://developer.apple.com/swift/">
+      <img src="https://img.shields.io/badge/Swift-5.0-blue.svg?style=flat&colorB=2EC9DD" alt="Swift 5.0">
+   </a>
+   <a href="https://cocoapods.org/pods/CiaoTransitions">
+      <img src="https://img.shields.io/cocoapods/p/CiaoTransitions.svg?style=flat&colorB=2EC9DD" alt="Platform">
+   </a>
+   <!--
+   <a href="https://alberdev.github.io/CiaoTransitions">
+      <img src="https://github.com/alberdev/CiaoTransitions/blob/gh-pages/badge.svg" alt="Documentation">
+   </a>
+   -->
+   <a href="https://twitter.com/alberdev/">
+      <img src="https://img.shields.io/badge/Twitter-@alberdev-blue.svg?style=flat&colorB=2EC9DD" alt="Twitter">
+   </a>
+   
+</p>
+
+<br/>
+
+<p align="center">
+   With <b>CiaoTransitions</b> you can make fancy custom push and modal transitions in your ios projects. You only need to follow some simple steps to implement it. Ciao is customizable and easy to use.
+</p>
+
+<br/>
+
+<p align="center" >
+<img src="https://raw.githubusercontent.com/alberdev/CiaoTransitions/master/Images/video_ciao.gif" alt="CiaoTransitions" title="CiaoTransitions demo">
+</p>
 
 # CiaoTransitions
 
-[![Version](https://img.shields.io/cocoapods/v/CiaoTransitions.svg?style=flat&colorB=2EC9DD)](https://cocoapods.org/pods/CiaoTransitions)
-[![License](https://img.shields.io/cocoapods/l/CiaoTransitions.svg?style=flat)](https://cocoapods.org/pods/CiaoTransitions)
-[![Platform](https://img.shields.io/cocoapods/p/CiaoTransitions.svg?style=flat)](https://cocoapods.org/pods/CiaoTransitions)
-![Swift](https://img.shields.io/badge/%20in-swift%204.2-orange.svg?style=flat&colorB=2EC9DD)
-
+- [x] Make awesome transitions
+- [x] Totally customizable
+- [x] App Store simulated transition included!
+- [x] Easy usage
+- [x] Supports iOS, developed in Swift 4
 
 ## Table of Contents
 
-- [Description](#description)
-- [Example](#example)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Configuration](#configuration)
@@ -27,23 +68,6 @@
 - [Contributing](#contributing)
 - [License](#license)
 
-## Description
-
-With `CiaoTransitions` you can make fancy custom push and modal transitions in your ios projects. You only need to follow some simple steps to implement it. Ciao is customizable and easy to use.
-
-- [x] Make awesome transitions
-- [x] Totally customizable
-- [x] App Store simulated transition included!
-- [x] Easy usage
-- [x] Supports iOS, developed in Swift 4
-
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-<p align="center" >
-<img src="https://raw.githubusercontent.com/alberdev/CiaoTransitions/master/Images/video_ciao.gif" alt="CiaoTransitions" title="CiaoTransitions demo">
-</p>
 
 ## Installation
 
